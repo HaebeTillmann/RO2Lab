@@ -1,0 +1,12 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/hapra007/ro2/riscv/alu.v,1730285702,verilog,,/home/hapra007/ro2/riscv/alu_tb_final.v,/home/hapra007/ro2/riscv/header_corrected.vh,alu,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/alu_tb_final.v,1730285587,verilog,,,/home/hapra007/ro2/riscv/header_corrected.vh,alu_tb,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/header_corrected.vh,1730284898,verilog,,,,,,,,,,,,
+/home/hapra007/ro2/riscv/pc.v,1730885866,verilog,,/home/hapra007/ro2/riscv/pc_tb.v,,pc,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/pc_tb.v,1730565706,verilog,,,,pc_tb,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/regs.v,1730885096,verilog,,/home/hapra007/ro2/riscv/regs_tb.v,,regset,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/regs_tb.v,1730884930,verilog,,,,regset_tb,,,../../../../,,,,,
+/home/hapra007/ro2/riscv/riscv.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
