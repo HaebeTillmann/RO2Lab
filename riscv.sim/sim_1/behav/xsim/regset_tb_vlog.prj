@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../var/autofs/misc/cad/tools/ro2Lab/v05/v_lib" --include "../../../../" \
+"../../../../design_sources/regset.v" \
+"../../../../simulation_sources/regset_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
