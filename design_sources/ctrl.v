@@ -2,11 +2,10 @@
 `define STATES 5
 
 module ctrl(
-    input [31:0] INSTR,
+    input [6:0] INSTR,
     input CLK, RES,
     input INSTR_VALID,
-    output reg REG_WRITE, INSTR_REQ, BRANCH,
-    output reg [5:0] ALU_S
+    output reg REG_WRITE, INSTR_REQ, BRANCH
     );
     
     parameter IDLE = `STATES'b0001;
@@ -33,29 +32,24 @@ module ctrl(
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
-                ALU_S = 6'b0;
             end
             
             FETCH: begin
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
-                ALU_S = 6'b0;
             end
             
             EX: begin
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
-                ALU_S = 6'b0;
             end
             
             WB: begin
                 REG_WRITE = 1'b1;
                 INSTR_REQ = 1'b1;
-                if ()
-                BRANCH = 1'b0;
-                ALU_S = 6'b0;
+                BRANCH = INSTR[6];
             end
         endcase
     end
