@@ -7,6 +7,8 @@ module pc(
 	output reg [31:0] PC_OUT
 	);
 	
+	initial PC_OUT = 32'h1A000000;
+	
 	always @(posedge CLK) begin
 	   if (RES) begin
 			PC_OUT = 32'h1A000000;

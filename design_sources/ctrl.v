@@ -1,10 +1,12 @@
 `include "riscv_isa_defines.v"
-`define STATES 5
+`define STATES 4
 
 module ctrl(
     input [6:0] INSTR,
     input CLK, RES,
-    input INSTR_VALID,
+    input INSTR_VALID, DATA_VALID,
+    
+    output DATA_REQ, DATA_WRITE_ENABLE,
     output reg REG_WRITE, INSTR_REQ, BRANCH
     );
     
@@ -17,20 +19,21 @@ module ctrl(
     
     always @(posedge CLK, posedge RES) begin
         if(RES == 1'b1) state <= IDLE;
-        else
-        case(state)
-            IDLE:state <= (INSTR_VALID == 1'b1)?FETCH:IDLE;
-            FETCH:state <= EX;
-            EX:state <= WB;
-            WB:state <= FETCH;
-        endcase
+        else begin
+            case(state)
+                IDLE:state <= (INSTR_VALID == 1'b1)?FETCH:IDLE;
+                FETCH:state <= EX;
+                EX:state <= WB;
+                WB:state <= FETCH;
+            endcase
+        end
     end
     
     always @(state) begin
         case(state)
             IDLE: begin
                 REG_WRITE = 1'b0;
-                INSTR_REQ = 1'b0;
+                INSTR_REQ = 1'b1;
                 BRANCH = 1'b0;
             end
             
@@ -47,7 +50,7 @@ module ctrl(
             end
             
             WB: begin
-                REG_WRITE = 1'b1;
+                REG_WRITE = INSTR[2] & INSTR[5];
                 INSTR_REQ = 1'b1;
                 BRANCH = INSTR[6];
             end

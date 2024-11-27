@@ -10,7 +10,7 @@ verilog xil_defaultlib  --include "../../../../../../../../var/autofs/misc/cad/t
 "../../../../design_sources/regset.v" \
 
 sv xil_defaultlib  --include "../../../../../../../../var/autofs/misc/cad/tools/ro2Lab/v05/v_lib" --include "../../../../" \
-"../../../../../../../../var/autofs/misc/cad/tools/ro2Lab/v05/v_lib/memory_sim.sv" \
+"../../../../riscv.srcs/sim_1/new/memory_sim.sv" \
 
 verilog xil_defaultlib  --include "../../../../../../../../var/autofs/misc/cad/tools/ro2Lab/v05/v_lib" --include "../../../../" \
 "../../../../riscv.srcs/sim_1/new/system_tb.v" \

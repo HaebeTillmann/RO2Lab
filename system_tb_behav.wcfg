@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="system_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="system_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="16.000001 us"></ZoomEndTime>
+      <Cursor1Time time="15.241620 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="141"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject type="array" fp_name="/system_tb/instr_read">
+      <obj_property name="ElementShortName">instr_read[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_read[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system_tb/instr_valid">
+      <obj_property name="ElementShortName">instr_valid</obj_property>
+      <obj_property name="ObjectShortName">instr_valid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system_tb/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system_tb/RES">
+      <obj_property name="ElementShortName">RES</obj_property>
+      <obj_property name="ObjectShortName">RES</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system_tb/instr_adr">
+      <obj_property name="ElementShortName">instr_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system_tb/instr_req">
+      <obj_property name="ElementShortName">instr_req</obj_property>
+      <obj_property name="ObjectShortName">instr_req</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group119">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system_tb/proc/alu/S">
+         <obj_property name="ElementShortName">S[5:0]</obj_property>
+         <obj_property name="ObjectShortName">S[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/alu/A">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/alu/B">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/alu_src_sel/S">
+         <obj_property name="ElementShortName">S</obj_property>
+         <obj_property name="ObjectShortName">S</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/alu_src_sel/Y">
+         <obj_property name="ElementShortName">Y[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Y[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/alu/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/alu/CMP">
+         <obj_property name="ElementShortName">CMP</obj_property>
+         <obj_property name="ObjectShortName">CMP</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group84">
+      <obj_property name="label">Imm Gen</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system_tb/proc/IMM_GEN/INSTR">
+         <obj_property name="ElementShortName">INSTR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">INSTR[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/IMM_GEN/IMM">
+         <obj_property name="ElementShortName">IMM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/alu_src_sel/S">
+         <obj_property name="ElementShortName">S</obj_property>
+         <obj_property name="ObjectShortName">S</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group169">
+      <obj_property name="label">Regset</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system_tb/proc/regset/D">
+         <obj_property name="ElementShortName">D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">D[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/regset/A_D">
+         <obj_property name="ElementShortName">A_D[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_D[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/regset/A_Q0">
+         <obj_property name="ElementShortName">A_Q0[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q0[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/regset/A_Q1">
+         <obj_property name="ElementShortName">A_Q1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q1[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/regset/write_enable">
+         <obj_property name="ElementShortName">write_enable</obj_property>
+         <obj_property name="ObjectShortName">write_enable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system_tb/proc/regset/dat">
+         <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group170">
+      <obj_property name="label">Control Logic</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system_tb/proc/ctrl/state">
+         <obj_property name="ElementShortName">state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/ctrl/REG_WRITE">
+         <obj_property name="ElementShortName">REG_WRITE</obj_property>
+         <obj_property name="ObjectShortName">REG_WRITE</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/ctrl/INSTR_REQ">
+         <obj_property name="ElementShortName">INSTR_REQ</obj_property>
+         <obj_property name="ObjectShortName">INSTR_REQ</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system_tb/proc/ctrl/BRANCH">
+         <obj_property name="ElementShortName">BRANCH</obj_property>
+         <obj_property name="ObjectShortName">BRANCH</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
