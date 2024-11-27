@@ -1,10 +1,11 @@
 module proc(
-    input [31:0] instr_read,
-    input instr_valid,
+    input [31:0] instr_read, data_read,
+    input instr_valid, data_valid,
     input CLK,
     input RES,
-    output [31:0] instr_adr,
-    output instr_req
+    
+    output instr_req, data_req, data_write_enable,
+    output [31:0] instr_adr, data_write, data_adr
     );
     
     wire [31:0] instr;
@@ -23,8 +24,5 @@ module proc(
     MUX_2x1_32 alu_src_sel(.I0(imm), .I1(regset_q1), .S(instr[5] | !instr[2]), .Y(alu_b));
     alu alu(.S({instr[30], instr[14:12], instr[6], instr[4]}), .A(regset_q0), .B(alu_b), .CMP(alu_cmp), .Q(alu_q));
     pc pc(.D(alu_q), .MODE(alu_cmp & branch), .ENABLE(instr_valid), .RES(RES), .CLK(CLK), .PC_OUT(instr_adr));
-    ctrl ctrl(.INSTR(instr[6:0]), .REG_WRITE(regset_we), .INSTR_REQ(instr_req), .BRANCH(branch), .CLK(CLK), .RES(RES), .INSTR_VALID(instr_valid));
-    
-    
-  
+    ctrl ctrl(.INSTR(instr[6:0]), .REG_WRITE(regset_we), .INSTR_REQ(instr_req), .BRANCH(branch), .CLK(CLK), .RES(RES), .INSTR_VALID(instr_valid), .DATA_VALID(data_valid), .DATA_REQ(data_req), .DATA_WRITE_ENABLE(data_write_enable));
 endmodule

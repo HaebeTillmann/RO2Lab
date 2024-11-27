@@ -6,7 +6,7 @@ module ctrl(
     input CLK, RES,
     input INSTR_VALID, DATA_VALID,
     
-    output DATA_REQ, DATA_WRITE_ENABLE,
+    output reg DATA_REQ, DATA_WRITE_ENABLE,
     output reg REG_WRITE, INSTR_REQ, BRANCH
     );
     
@@ -23,8 +23,8 @@ module ctrl(
             case(state)
                 IDLE:state <= (INSTR_VALID == 1'b1)?FETCH:IDLE;
                 FETCH:state <= EX;
-                EX:state <= WB;
-                WB:state <= FETCH;
+                EX:state <= (DATA_VALID == 1 || INSTR != `OPCODE_LOAD)?WB:EX;
+                WB:state <= (INSTR_VALID == 1'b1)?FETCH:WB;
             endcase
         end
     end
@@ -35,24 +35,50 @@ module ctrl(
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b1;
                 BRANCH = 1'b0;
+                DATA_WRITE_ENABLE = 1'b0;
+                DATA_REQ = 1'b0;
             end
             
             FETCH: begin
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
+                DATA_WRITE_ENABLE = 1'b0;
+                DATA_REQ = 1'b0;
             end
             
             EX: begin
                 REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
+                DATA_WRITE_ENABLE = 1'b0;
+                DATA_REQ = 1'b0;
+                
+                casez(INSTR)
+                    `OPCODE_LOAD: DATA_REQ = 1'b1;
+                endcase
             end
             
             WB: begin
-                REG_WRITE = INSTR[2] & INSTR[5];
+                REG_WRITE = 1'b1;
                 INSTR_REQ = 1'b1;
-                BRANCH = INSTR[6];
+                BRANCH = 1'b0;
+                DATA_WRITE_ENABLE = 1'b0;
+                DATA_REQ = 1'b0;
+                
+                casez(INSTR)
+                    `OPCODE_STORE: begin
+                        DATA_WRITE_ENABLE = 1'b1;
+                        REG_WRITE = 1'b0;
+                        
+                    end
+                    `OPCODE_BRANCH: begin
+                        BRANCH = 1'b1;
+                        REG_WRITE = 1'b0;
+                    end
+                    `OPCODE_JAL: BRANCH = 1'b1;
+                    `OPCODE_JALR: BRANCH = 1'b1;
+                endcase
             end
         endcase
     end
