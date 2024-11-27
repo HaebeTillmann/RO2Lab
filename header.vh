@@ -5,7 +5,7 @@
 `define ALU_XOR 6'b010001
 `define ALU_SLL 6'b000101
 `define ALU_SRA 6'b110101
-`define ALU_SRL 6'b010101
+`define ALU_SRL 6'b00101
 `define ALU_SLT 6'b001001
 `define ALU_SLTU 6'b001101
 `define ALU_EQ 6'b?00010
