@@ -4,6 +4,12 @@ module pc_tb ();
 	wire [31:0] PC_OUT;
 	reg [31:0] soll;
 
+	initial
+		begin
+			$dumpfile("pc_tb.vcd");
+			$dumpvars(0,pc_tb);
+		end
+
 	pc dut(.D(D), .MODE(MODE), .ENABLE(ENABLE), .RES(RES), .CLK(CLK), .PC_OUT(PC_OUT));
 
 	initial begin

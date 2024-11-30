@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SVCompilerDirectivesDefines">
+    <option name="define">
+      <map>
+        <entry key="A">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="AIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="AL">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_A">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_ADD">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="8" />
+                    <option name="replacementList" value="6'b000001" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="8" />
+                    <option name="replacementList" value="7'b0000001" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                  <option value="alu.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AND">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="60" />
+                    <option name="replacementList" value="6'b011101" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="62" />
+                    <option name="replacementList" value="7'b0011101" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_D">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DV">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DVI">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DVIIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DVS">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_DVSIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_EQ">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="267" />
+                    <option name="replacementList" value="6'b?00010" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="278" />
+                    <option name="replacementList" value="7'b0?00010" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_GE">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="342" />
+                    <option name="replacementList" value="6'b?10110" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="356" />
+                    <option name="replacementList" value="7'b0?10110" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_GEU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="393" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="409" />
+                    <option name="replacementList" value="7'b0?11110" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_LT">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="317" />
+                    <option name="replacementList" value="6'b?10010" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="330" />
+                    <option name="replacementList" value="7'b0?10010" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_LTU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="367" />
+                    <option name="replacementList" value="6'b?11010" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="382" />
+                    <option name="replacementList" value="7'b0?11010" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_NE">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="292" />
+                    <option name="replacementList" value="6'b?00110" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="304" />
+                    <option name="replacementList" value="7'b0?00110" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_OR">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="86" />
+                    <option name="replacementList" value="6'b011001" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="89" />
+                    <option name="replacementList" value="7'b0011001" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_S">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_S1">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_S12">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_S1IntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SLL">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="137" />
+                    <option name="replacementList" value="6'b000101" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="142" />
+                    <option name="replacementList" value="7'b0000101" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SLT">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="214" />
+                    <option name="replacementList" value="6'b001001" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="223" />
+                    <option name="replacementList" value="7'b0001001" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SLTU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="240" />
+                    <option name="replacementList" value="6'b001101" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="250" />
+                    <option name="replacementList" value="7'b0001101" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SRA">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="163" />
+                    <option name="replacementList" value="6'b110101" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="169" />
+                    <option name="replacementList" value="7'b0110101" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SRL">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="189" />
+                    <option name="replacementList" value="6'b00101" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="196" />
+                    <option name="replacementList" value="7'b0010101" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SUB">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="34" />
+                    <option name="replacementList" value="6'b100001" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="35" />
+                    <option name="replacementList" value="7'b0100001" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SV">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_SVI">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="420" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_XOR">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="111" />
+                    <option name="replacementList" value="6'b010001" />
+                    <option name="source" value="header.vh" />
+                  </Body>
+                  <Body>
+                    <option name="offset" value="115" />
+                    <option name="replacementList" value="7'b0010001" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+              <option name="dependencies">
+                <set>
+                  <option value="alu_tb.v" />
+                </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="GLBL">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="141" />
+                    <option name="source" value="glbl.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="STATES">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="39" />
+                    <option name="replacementList" value="4" />
+                    <option name="source" value="ctrl.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
