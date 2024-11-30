@@ -21,7 +21,7 @@
 
 
 module alu(
-	input [6:0] S,
+	input [7:0] S,
 	input signed [31:0] A,
 	input signed [31:0] B,
 	output reg CMP,
@@ -50,7 +50,7 @@ module alu(
 			`ALU_LTU: CMP = $unsigned(A) < $unsigned(B);
 			`ALU_GEU: CMP = $unsigned(A) >= $unsigned(B);
 			`ALU_LUI: Q = B << 12;
-			`ALU_AUIPC: Q = (B << 12) + A
+			`ALU_AUIPC: Q = (B << 12) + A;
 			default: begin
 			     Q = 32'h0;
 			     CMP = 0;

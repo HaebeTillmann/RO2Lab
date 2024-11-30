@@ -49,7 +49,7 @@ module proc(
     MUX_2x1_32 alu_a_src_sel(
         .I0(regset_q0), // Other
         .I1(pc_out),    // AUIPC
-        .S(instr === `OPCODE_AUIPC),
+        .S(instr[6:0] === `OPCODE_AUIPC),
         .Y(alu_a));
 
     MUX_2x1_32 alu_b_src_sel(
@@ -60,7 +60,7 @@ module proc(
     );
 
     alu alu(
-        .S({instr[0:6] === `OPCODE_LUI, instr[0:6] === `OPCODE_AUIPC, instr[30], instr[14:12], instr[6], instr[4]}),
+        .S({instr[6:0] === `OPCODE_LUI, instr[6:0] === `OPCODE_AUIPC, instr[30], instr[14:12], instr[6], instr[4]}),
         .A(alu_a),
         .B(alu_b),
         .CMP(alu_cmp),

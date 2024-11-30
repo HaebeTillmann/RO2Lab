@@ -9,8 +9,8 @@ module imm_gen(
         casez(INSTR[6:0])
             `OPCODE_OPIMM: IMM = {{20{INSTR[31]}}, INSTR[31:20]};
             `OPCODE_JALR: IMM = {{20{INSTR[31]}}, INSTR[31:20]};
-            `OPCODE_AUIPC: IMM = {INSTR[31:12], 12'b0};
-            `OPCODE_LUI: IMM = {INSTR[31:12], 12'b0};
+            `OPCODE_AUIPC: IMM = INSTR[31:12];
+            `OPCODE_LUI: IMM = INSTR[31:12];
 	        `OPCODE_STORE: IMM = {INSTR[31:25], INSTR[11:7]};
             `OPCODE_LOAD: IMM = INSTR[31:20];
             `OPCODE_BRANCH: IMM = {{19{INSTR[31]}}, INSTR[31], INSTR[7], INSTR[30:25], INSTR[11:8], 1'b0};

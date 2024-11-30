@@ -21,6 +21,6 @@ module system_tb();
         #20;
     end
     
-    proc proc(.instr_read(instr_read), .instr_valid(instr_valid), .CLK(CLK), .RES(RES), .instr_adr(instr_adr), .instr_req(instr_req));
+    proc proc(.instr_read(instr_read), .instr_valid(instr_valid), .CLK(CLK), .RES(RES), .pc_out(instr_adr), .instr_req(instr_req));
     memory_sim msim(.clk_i(CLK), .data_read(instr_read), .data_adr(instr_adr), .data_req(instr_req), .data_rvalid(instr_valid), .data_write_enable(1'b0));
 endmodule

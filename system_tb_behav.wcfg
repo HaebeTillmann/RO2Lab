@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="99.500 ns"></Cursor1Time>
+      <ZoomEndTime time="1,016.105 ns"></ZoomEndTime>
+      <Cursor1Time time="200.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="141"></NameColumnWidth>
-      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+      <NameColumnWidth column_width="254"></NameColumnWidth>
+      <ValueColumnWidth column_width="123"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject type="group" fp_name="group618">
       <obj_property name="label">Program Counter</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -54,8 +54,8 @@
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system_tb/proc/alu/S">
-         <obj_property name="ElementShortName">S[5:0]</obj_property>
-         <obj_property name="ObjectShortName">S[5:0]</obj_property>
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
          <obj_property name="CustomSignalColor">#FF00FF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -68,18 +68,6 @@
       <wvobject type="array" fp_name="/system_tb/proc/alu/B">
          <obj_property name="ElementShortName">B[31:0]</obj_property>
          <obj_property name="ObjectShortName">B[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/system_tb/proc/alu_src_sel/S">
-         <obj_property name="ElementShortName">S</obj_property>
-         <obj_property name="ObjectShortName">S</obj_property>
-         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system_tb/proc/alu_src_sel/Y">
-         <obj_property name="ElementShortName">Y[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Y[31:0]</obj_property>
          <obj_property name="CustomSignalColor">#FF00FF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -109,12 +97,6 @@
       <wvobject type="array" fp_name="/system_tb/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/system_tb/proc/alu_src_sel/S">
-         <obj_property name="ElementShortName">S</obj_property>
-         <obj_property name="ObjectShortName">S</obj_property>
          <obj_property name="CustomSignalColor">#00FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -158,6 +140,7 @@
          <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="CustomSignalColor">#FFFF00</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group170">
@@ -204,5 +187,9 @@
       <obj_property name="ObjectShortName">ENABLE</obj_property>
       <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system_tb/proc/pc/PC_OUT">
+      <obj_property name="ElementShortName">PC_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_OUT[31:0]</obj_property>
    </wvobject>
 </wave_config>
