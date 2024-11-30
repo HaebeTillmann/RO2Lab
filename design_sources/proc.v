@@ -20,14 +20,6 @@ module proc(
     wire [5:0] alu_s;
     wire branch;
     wire pc_enable;
-
-    reg alu_a_sel;
-
-    always @(instr) begin
-        if (instr == `OPCODE_LUI) alu_a_sel = 0;
-        else if (instr == `OPCODE_LUI) alu_a_sel = 1;
-        else alu_a_sel = 2;
-    end
     
     REG_DRE_32 instr_buffer(
         .D(instr_read),
@@ -54,11 +46,10 @@ module proc(
         .IMM(imm)
     );
 
-    MUX_3x1_32 alu_a_src_sel(
-        .I0(32'd0),     // LUI
+    MUX_2x1_32 alu_a_src_sel(
+        .I0(regset_q0), // Other
         .I1(pc_out),    // AUIPC
-        .I2(regset_q0), // Other
-        .S(alu_a_sel),
+        .S(instr === `OPCODE_AUIPC),
         .Y(alu_a));
 
     MUX_2x1_32 alu_b_src_sel(
@@ -69,7 +60,7 @@ module proc(
     );
 
     alu alu(
-        .S({(instr[0:6] === `OPCODE_LUI) || (instr[0:6] === `OPCODE_AUIPC), instr[30], instr[14:12], instr[6], instr[4]}),
+        .S({instr[0:6] === `OPCODE_LUI, instr[0:6] === `OPCODE_AUIPC, instr[30], instr[14:12], instr[6], instr[4]}),
         .A(alu_a),
         .B(alu_b),
         .CMP(alu_cmp),

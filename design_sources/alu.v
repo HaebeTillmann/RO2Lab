@@ -1,20 +1,23 @@
-`define ALU_ADD 7'b0000001
-`define ALU_SUB 7'b0100001
-`define ALU_AND 7'b0011101
-`define ALU_OR 7'b0011001
-`define ALU_XOR 7'b0010001
-`define ALU_SLL 7'b0000101
-`define ALU_SRA 7'b0110101
-`define ALU_SRL 7'b0010101
-`define ALU_SLT 7'b0001001
-`define ALU_SLTU 7'b0001101
-`define ALU_EQ 7'b0?00010
-`define ALU_NE 7'b0?00110
-`define ALU_LT 7'b0?10010
-`define ALU_GE 7'b0?10110
-`define ALU_LTU 7'b0?11010
-`define ALU_GEU 7'b0?11110
-`define ALU_DVI 7'b1??????
+`define ALU_ADD 8'b00000001
+`define ALU_SUB 8'b00100001
+`define ALU_AND 8'b00011101
+`define ALU_OR 8'b00011001
+`define ALU_XOR 8'b00010001
+`define ALU_SLL 8'b00000101
+`define ALU_SRA 8'b00110101
+`define ALU_SRL 8'b00010101
+`define ALU_SLT 8'b00001001
+`define ALU_SLTU 8'b00001101
+`define ALU_EQ 8'b00?00010
+`define ALU_NE 8'b00?00110
+`define ALU_LT 8'b00?10010
+`define ALU_GE 8'b00?10110
+`define ALU_LTU 8'b00?11010
+`define ALU_GEU 8'b00?11110
+
+// Direktwertbefehle
+`define ALU_LUI 8'b10??????
+`define ALU_AUIPC 8'b01??????
 
 
 module alu(
@@ -46,7 +49,8 @@ module alu(
 			`ALU_GE: CMP = A >= B;
 			`ALU_LTU: CMP = $unsigned(A) < $unsigned(B);
 			`ALU_GEU: CMP = $unsigned(A) >= $unsigned(B);
-			`ALU_DVI: Q = (B << 12) + A;
+			`ALU_LUI: Q = B << 12;
+			`ALU_AUIPC: Q = (B << 12) + A
 			default: begin
 			     Q = 32'h0;
 			     CMP = 0;

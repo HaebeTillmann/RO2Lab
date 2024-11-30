@@ -65,7 +65,8 @@
               <option name="definitions">
                 <list>
                   <Body>
-                    <option name="offset" value="420" />
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -79,7 +80,8 @@
               <option name="definitions">
                 <list>
                   <Body>
-                    <option name="offset" value="420" />
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -99,7 +101,7 @@
                   </Body>
                   <Body>
                     <option name="offset" value="8" />
-                    <option name="replacementList" value="7'b0000001" />
+                    <option name="replacementList" value="8'b00000001" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -119,7 +121,8 @@
               <option name="definitions">
                 <list>
                   <Body>
-                    <option name="offset" value="420" />
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -138,8 +141,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="62" />
-                    <option name="replacementList" value="7'b0011101" />
+                    <option name="offset" value="64" />
+                    <option name="replacementList" value="8'b00011101" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -158,7 +161,53 @@
               <option name="definitions">
                 <list>
                   <Body>
-                    <option name="offset" value="420" />
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AUI">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AUIP">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_AUIPC">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="474" />
+                    <option name="replacementList" value="8'b01??????" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -172,7 +221,8 @@
               <option name="definitions">
                 <list>
                   <Body>
-                    <option name="offset" value="420" />
+                    <option name="offset" value="436" />
+                    <option name="replacementList" value="7'b1??????" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -279,8 +329,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="278" />
-                    <option name="replacementList" value="7'b0?00010" />
+                    <option name="offset" value="288" />
+                    <option name="replacementList" value="8'b00?00010" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -304,8 +354,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="356" />
-                    <option name="replacementList" value="7'b0?10110" />
+                    <option name="offset" value="369" />
+                    <option name="replacementList" value="8'b00?10110" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -328,8 +378,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="409" />
-                    <option name="replacementList" value="7'b0?11110" />
+                    <option name="offset" value="424" />
+                    <option name="replacementList" value="8'b00?11110" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -338,6 +388,36 @@
                 <set>
                   <option value="alu_tb.v" />
                 </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_L">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="466" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_LIntellijIdeaRulezzz">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="466" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
               </option>
             </Define>
           </value>
@@ -353,8 +433,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="330" />
-                    <option name="replacementList" value="7'b0?10010" />
+                    <option name="offset" value="342" />
+                    <option name="replacementList" value="8'b00?10010" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -378,8 +458,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="382" />
-                    <option name="replacementList" value="7'b0?11010" />
+                    <option name="offset" value="396" />
+                    <option name="replacementList" value="8'b00?11010" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -388,6 +468,36 @@
                 <set>
                   <option value="alu_tb.v" />
                 </set>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_LU">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="466" />
+                    <option name="replacementList" value="7'b1??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
+              </option>
+            </Define>
+          </value>
+        </entry>
+        <entry key="ALU_LUI">
+          <value>
+            <Define>
+              <option name="definitions">
+                <list>
+                  <Body>
+                    <option name="offset" value="504" />
+                    <option name="replacementList" value="8'b10??????" />
+                    <option name="source" value="alu.v" />
+                  </Body>
+                </list>
               </option>
             </Define>
           </value>
@@ -403,8 +513,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="304" />
-                    <option name="replacementList" value="7'b0?00110" />
+                    <option name="offset" value="315" />
+                    <option name="replacementList" value="8'b00?00110" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -428,8 +538,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="89" />
-                    <option name="replacementList" value="7'b0011001" />
+                    <option name="offset" value="92" />
+                    <option name="replacementList" value="8'b00011001" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -523,8 +633,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="142" />
-                    <option name="replacementList" value="7'b0000101" />
+                    <option name="offset" value="147" />
+                    <option name="replacementList" value="8'b00000101" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -548,8 +658,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="223" />
-                    <option name="replacementList" value="7'b0001001" />
+                    <option name="offset" value="231" />
+                    <option name="replacementList" value="8'b00001001" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -573,8 +683,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="250" />
-                    <option name="replacementList" value="7'b0001101" />
+                    <option name="offset" value="259" />
+                    <option name="replacementList" value="8'b00001101" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -598,8 +708,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="169" />
-                    <option name="replacementList" value="7'b0110101" />
+                    <option name="offset" value="175" />
+                    <option name="replacementList" value="8'b00110101" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -623,8 +733,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="196" />
-                    <option name="replacementList" value="7'b0010101" />
+                    <option name="offset" value="203" />
+                    <option name="replacementList" value="8'b00010101" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -648,8 +758,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="35" />
-                    <option name="replacementList" value="7'b0100001" />
+                    <option name="offset" value="36" />
+                    <option name="replacementList" value="8'b00100001" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
@@ -701,8 +811,8 @@
                     <option name="source" value="header.vh" />
                   </Body>
                   <Body>
-                    <option name="offset" value="115" />
-                    <option name="replacementList" value="7'b0010001" />
+                    <option name="offset" value="119" />
+                    <option name="replacementList" value="8'b00010001" />
                     <option name="source" value="alu.v" />
                   </Body>
                 </list>
