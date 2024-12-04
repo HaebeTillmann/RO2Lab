@@ -1,0 +1,44 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../edusoc-system.srcs/sources_1/imports/v_lib" \
+"../../../../edusoc-system.srcs/sources_1/imports/v_lib/MUX_2x1_32.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/v_lib/REG_DRE_32.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/alu.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/ctrl.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/imm_gen.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/pc.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/proc.v" \
+"../../../../edusoc-system.srcs/sources_1/imports/design_sources/regset.v" \
+
+sv xil_defaultlib  --include "../../../../edusoc-system.srcs/sources_1/imports/v_lib" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/pkgs/globalconf.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/edusoc.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/edusoc_basic.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/pkgs/registers.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_clock_reset.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_control.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_crc32.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_framebuffer.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_gpio.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_interconnect.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_interfaces.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_interrupt_controller.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_memory_block.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_memory_controller.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_peripheral_controller.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_peripherals.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_pwm.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_rrprio_encoder.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_timer.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_uart.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_uart_bridge.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_vga.sv" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/soc/soc_video_controller.sv" \
+
+verilog xil_defaultlib  --include "../../../../edusoc-system.srcs/sources_1/imports/v_lib" \
+"../../../../edusoc-system.srcs/sources_1/imports/EduSoC/system.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
