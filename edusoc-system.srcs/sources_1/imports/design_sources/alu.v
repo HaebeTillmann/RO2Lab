@@ -38,7 +38,7 @@ module alu(
 			`ALU_AND: Q = A & B;
 			`ALU_OR: Q = A | B;
 			`ALU_XOR: Q = A ^ B;
-			`ALU_SLL: Q = A <<< B;
+			`ALU_SLL: Q = A << B;
 			`ALU_SRA: Q = A >>> B;
 			`ALU_SRL: Q = A >> B;
 			`ALU_SLT: Q = A < B;

@@ -32,3 +32,4 @@
 `define OPCODE_JAL 7'h6f
 `define OPCODE_AUIPC 7'h17
 `define OPCODE_LUI 7'h37
+`define OPCODE_MRET 7'h73

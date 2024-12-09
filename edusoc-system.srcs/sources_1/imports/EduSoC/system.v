@@ -39,7 +39,8 @@ module system (
     wire cpu_clk;
     wire cpu_res;
     wire instr_valid;
-    wire data_valid, instr_req, data_req, data_we;
+    wire data_valid, instr_req, data_req, data_we, irq, irq_ack;
+    wire [4:0] irq_id, irq_ack_id;
     wire [31:0] pc_out, data_write, data_adr, instr_adr, data_read, instr_read;
 
     edusoc_basic soc (
@@ -70,8 +71,8 @@ module system (
       .DATA_ADDR(data_adr),
       .DATA_WDATA(data_write),
       .DATA_RDATA(data_read),
-      .IRQ(),
-      .IRQ_ID(),
+      .IRQ(irq),
+      .IRQ_ID(irq_id),
       .IRQ_ACK(1'b0),
       .IRQ_ACK_ID(5'b0)
     );
@@ -83,13 +84,17 @@ module system (
     .data_valid(data_valid),
     .CLK(cpu_clk),
     .RES(cpu_res),
+    .irq(irq),
+    .irq_id(irq_id),
     
     .pc_out(instr_adr),
     .data_write(data_write),
     .data_adr(data_adr),
     .instr_req(instr_req),
     .data_req(data_req),
-    .data_write_enable(data_we)
+    .data_write_enable(data_we),
+    .irq_ack(irq_ack),
+    .irq_ack_id(irq_ack_id)
     );
     
     `ifdef XILINX_SIMULATOR
