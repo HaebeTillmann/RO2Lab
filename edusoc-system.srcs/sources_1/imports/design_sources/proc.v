@@ -84,7 +84,7 @@ module proc(
     
     MUX_2x1_32 pc_d_src_sel(
         .I0(imm + pc_out),
-        .I1(regset_q0),
+        .I1(regset_q0 + imm),
         .S(instr[6:0] === `OPCODE_JALR),
         .Y(pc_d)
     );
