@@ -15,6 +15,7 @@ module ctrl(
     input [6:0] INSTR,
     input CLK, RES,
     input INSTR_VALID, DATA_VALID,
+    input ALU_CMP,
     
     output reg DATA_REQ, DATA_WRITE_ENABLE, PC_ENABLE,
     output reg REG_WRITE, INSTR_REQ, BRANCH, MRET
@@ -62,38 +63,34 @@ module ctrl(
             end
             
             EX: begin
-                REG_WRITE = 1'b1;
+                REG_WRITE = 1'b0;
                 INSTR_REQ = 1'b0;
                 BRANCH = 1'b0;
                 DATA_WRITE_ENABLE = 1'b0;
                 DATA_REQ = 1'b0;
-                PC_ENABLE = 1'b1;
+                PC_ENABLE = 1'b0;
                 MRET = 1'b0;
-                
-                casez(INSTR)
-                    `OPCODE_LOAD: DATA_REQ = 1'b1;
-                    `OPCODE_MRET: MRET = 1'b1;
-                    `OPCODE_BRANCH: BRANCH = 1'b1;
-                    `OPCODE_JAL: BRANCH = 1'b1;
-                    `OPCODE_JALR: BRANCH = 1'b1;
-                endcase
             end
             
             WB: begin
-                REG_WRITE = 1'b0;
+                REG_WRITE = 1'b1;
                 BRANCH = 1'b0;
                 DATA_WRITE_ENABLE = 1'b0;
                 DATA_REQ = 1'b0;
-                INSTR_REQ = 1'b1;
-                PC_ENABLE = 1'b0;
+                INSTR_REQ = 1'b0;
+                PC_ENABLE = 1'b1;
                 MRET = 1'b0;
                 
                 casez(INSTR)
                     `OPCODE_STORE: begin
                         DATA_WRITE_ENABLE = 1'b1;
                         REG_WRITE = 1'b0;
-                        
                     end
+                    `OPCODE_LOAD: DATA_REQ = 1'b1;
+                    `OPCODE_MRET: MRET = 1'b1;
+                    `OPCODE_BRANCH: if (ALU_CMP === 1'b1) BRANCH = 1'b1;
+                    `OPCODE_JAL: BRANCH = 1'b1;
+                    `OPCODE_JALR: BRANCH = 1'b1;
                 endcase
             end
         endcase

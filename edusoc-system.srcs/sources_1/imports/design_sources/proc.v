@@ -18,7 +18,7 @@ module proc(
     wire [31:0] regset_q0, regset_q1;
     wire regset_we;
     wire [31:0] alu_b, alu_a;
-    wire [31:0] alu_cmp;
+    wire alu_cmp;
     wire [5:0] alu_s;
     wire branch;
     wire pc_enable;
@@ -83,7 +83,7 @@ module proc(
     );
     
     MUX_2x1_32 pc_d_src_sel(
-        .I0(imm*4 + pc_out),
+        .I0(imm + pc_out),
         .I1(regset_q0),
         .S(instr[6:0] === `OPCODE_JALR),
         .Y(pc_d)
@@ -91,7 +91,7 @@ module proc(
     
     pc pc(
         .D(pc_d),
-        .MODE(branch | irq),
+        .MODE(branch || irq),
         .ENABLE(pc_enable),
         .RES(RES),
         .CLK(CLK),
@@ -113,6 +113,7 @@ module proc(
         .RES(RES),
         .INSTR_VALID(instr_valid),
         .DATA_VALID(data_valid),
+        .ALU_CMP(alu_cmp),
         .DATA_REQ(data_req),
         .DATA_WRITE_ENABLE(data_write_enable),
         .PC_ENABLE(pc_enable),
