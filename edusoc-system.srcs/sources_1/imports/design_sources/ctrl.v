@@ -37,11 +37,20 @@ module ctrl(
                 FETCH:state <= (INSTR_VALID == 1'b1)?EX:FETCH;
                 EX:state <= (DATA_VALID == 1 || (INSTR != `OPCODE_LOAD && INSTR != `OPCODE_STORE))?WB:EX;
                 WB:state <= FETCH;
+                default:;
             endcase
         end
     end
     
     always @(state) begin
+        REG_WRITE = 1'b0;
+        INSTR_REQ = 1'b0;
+        BRANCH = 1'b0;
+        DATA_WRITE_ENABLE = 1'b0;
+        DATA_REQ = 1'b0;
+        PC_ENABLE = 1'b0;
+        MRET = 1'b0;
+        
         case(state)
             IDLE: begin
                 REG_WRITE = 1'b0;
@@ -72,13 +81,14 @@ module ctrl(
                 PC_ENABLE = 1'b0;
                 MRET = 1'b0;
                 
-                casez(INSTR)
+                case(INSTR)
                     `OPCODE_LOAD: DATA_REQ = 1'b1;
                     `OPCODE_STORE: begin
                         DATA_WRITE_ENABLE = 1'b1;
                         REG_WRITE = 1'b0;
                         DATA_REQ = 1'b1;
                     end
+                    default:;
                 endcase
             end
             
@@ -91,12 +101,13 @@ module ctrl(
                 PC_ENABLE = 1'b1;
                 MRET = 1'b0;
                 
-                casez(INSTR)
+                case(INSTR)
                     `OPCODE_LOAD: DATA_REQ = 1'b1;
                     `OPCODE_MRET: MRET = 1'b1;
                     `OPCODE_BRANCH: if (ALU_CMP === 1'b1) BRANCH = 1'b1;
                     `OPCODE_JAL: BRANCH = 1'b1;
                     `OPCODE_JALR: BRANCH = 1'b1;
+                    default:;
                 endcase
             end
         endcase

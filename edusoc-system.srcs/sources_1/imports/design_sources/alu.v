@@ -1,3 +1,4 @@
+`define ALU_NEN 8'b00000000
 `define ALU_ADD 8'b00000001
 `define ALU_SUB 8'b00100001
 `define ALU_AND 8'b00011101
@@ -15,13 +16,8 @@
 `define ALU_LTU 8'b00?11010
 `define ALU_GEU 8'b00?11110
 
-// Direktwertbefehle
-`define ALU_LUI 8'b10??????
-`define ALU_AUIPC 8'b01??????
-
-
 module alu(
-	input [7:0] S,
+	input [6:0] S,
 	input signed [31:0] A,
 	input signed [31:0] B,
 	output reg CMP,
@@ -49,8 +45,7 @@ module alu(
 			`ALU_GE: CMP = A >= B;
 			`ALU_LTU: CMP = $unsigned(A) < $unsigned(B);
 			`ALU_GEU: CMP = $unsigned(A) >= $unsigned(B);
-			`ALU_LUI: Q = B << 12;
-			`ALU_AUIPC: Q = (B << 12) + A;
+			`ALU_NEN: Q = B;
 			default: begin
 			     Q = 32'h0;
 			     CMP = 0;

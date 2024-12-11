@@ -40,14 +40,14 @@ module proc(
     MUX_2x1_32 regset_d_src_sel(
         .I0(alu_q),
         .I1(pc_out + 4),
-        .S(instr[6:0] === `OPCODE_JAL),
+        .S(instr[6:0] == `OPCODE_JAL),
         .Y(regset_d)
     );
     
     MUX_2x1_32 regset_d2_src_sel(
         .I0(regset_d),
         .I1(data_read),
-        .S(instr[6:0] === `OPCODE_LOAD),
+        .S(instr[6:0] == `OPCODE_LOAD),
         .Y(regset_d2)
     );
 
@@ -83,7 +83,7 @@ module proc(
     
 
     alu alu(
-        .S({instr[6:0] === `OPCODE_LUI, instr[6:0] === `OPCODE_AUIPC, instr[30], instr[14:12], instr[6], instr[4]}),
+        .S(instr[6:0] == `OPCODE_LUI?32'b0:{(instr[6:0] == `OPCODE_OPIMM && instr[14:12] == 3'b101)?instr[30]:0, instr[14:12], instr[6], instr[4]}),
         .A(alu_a),
         .B(alu_b),
         .CMP(alu_cmp),

@@ -15,6 +15,7 @@ module pc(
 	reg [31:0] adr_store;
 	
 	initial PC_OUT = 32'h1A000000;
+	initial IRQ_ACK = 1'b0;
 	
 	always @(posedge CLK) begin
 	   if (mret) begin
@@ -29,6 +30,7 @@ module pc(
             adr_store = PC_OUT;
             PC_OUT = IRQ_J_ADR;
             IRQ_ACK = 1'b1;
+            IRQ_ACK_ID = IRQ_ID;
 		end
 		else begin
             if (ENABLE) begin
