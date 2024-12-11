@@ -8,8 +8,9 @@ module proc(
     input RES,
     
     output instr_req, data_req, data_write_enable,irq_ack,
-    output reg [4:0] irq_ack_id,
-    output [31:0] pc_out, data_write, data_adr
+    output [4:0] irq_ack_id,
+    output [31:0] pc_out, data_write,
+    output [31:0] data_adr
     );
     
     wire [31:0] instr;
@@ -23,7 +24,10 @@ module proc(
     wire branch;
     wire pc_enable;
     wire mret;
-    wire [31:0] pc_d, regset_d;
+    wire [31:0] pc_d, regset_d, regset_d2;
+    
+    assign data_adr = regset_q0 + imm;
+    assign data_write = regset_q1;
     
     REG_DRE_32 instr_buffer(
         .D(instr_read),
@@ -39,9 +43,16 @@ module proc(
         .S(instr[6:0] === `OPCODE_JAL),
         .Y(regset_d)
     );
+    
+    MUX_2x1_32 regset_d2_src_sel(
+        .I0(regset_d),
+        .I1(data_read),
+        .S(instr[6:0] === `OPCODE_LOAD),
+        .Y(regset_d2)
+    );
 
     regset regset(
-        .D(regset_d),
+        .D(regset_d2),
         .A_D(instr[11:7]),
         .A_Q0(instr[19:15]),
         .A_Q1(instr[24:20]),
@@ -51,9 +62,6 @@ module proc(
         .Q0(regset_q0),
         .Q1(regset_q1)
     );
-    
-    //always dataq_adr = regset_q0;
-    //always data_write = regset_q1;
 
     imm_gen IMM_GEN(
         .INSTR(instr),
@@ -99,10 +107,10 @@ module proc(
         .IRQ(irq),
         .IRQ_J_ADR((irq_id << 2) + 32'h1C000000),
         .mret(mret),
-        .IRQ_ACK(irq_ack)
+        .IRQ_ACK(irq_ack),
+        .IRQ_ID(irq_id),
+        .IRQ_ACK_ID(irq_ack_id)
     );
-    
-    always @(posedge irq_ack) irq_ack_id = irq_id;
 
     ctrl ctrl(
         .INSTR(instr[6:0]),

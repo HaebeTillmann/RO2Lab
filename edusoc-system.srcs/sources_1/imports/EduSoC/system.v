@@ -67,7 +67,7 @@ module system (
       .DATA_REQ(data_req),
       .DATA_VALID(data_valid),
       .DATA_WE(data_we),
-      .DATA_BE(4'b0),
+      .DATA_BE(4'b1111),
       .DATA_ADDR(data_adr),
       .DATA_WDATA(data_write),
       .DATA_RDATA(data_read),

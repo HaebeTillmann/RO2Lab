@@ -16,6 +16,7 @@ module ctrl(
     input CLK, RES,
     input INSTR_VALID, DATA_VALID,
     input ALU_CMP,
+    input IRQ,
     
     output reg DATA_REQ, DATA_WRITE_ENABLE, PC_ENABLE,
     output reg REG_WRITE, INSTR_REQ, BRANCH, MRET
@@ -34,7 +35,7 @@ module ctrl(
             case(state)
                 IDLE:state <= FETCH;
                 FETCH:state <= (INSTR_VALID == 1'b1)?EX:FETCH;
-                EX:state <= (DATA_VALID == 1 || INSTR != `OPCODE_LOAD)?WB:EX;
+                EX:state <= (DATA_VALID == 1 || (INSTR != `OPCODE_LOAD && INSTR != `OPCODE_STORE))?WB:EX;
                 WB:state <= FETCH;
             endcase
         end
@@ -70,6 +71,15 @@ module ctrl(
                 DATA_REQ = 1'b0;
                 PC_ENABLE = 1'b0;
                 MRET = 1'b0;
+                
+                casez(INSTR)
+                    `OPCODE_LOAD: DATA_REQ = 1'b1;
+                    `OPCODE_STORE: begin
+                        DATA_WRITE_ENABLE = 1'b1;
+                        REG_WRITE = 1'b0;
+                        DATA_REQ = 1'b1;
+                    end
+                endcase
             end
             
             WB: begin
@@ -82,10 +92,6 @@ module ctrl(
                 MRET = 1'b0;
                 
                 casez(INSTR)
-                    `OPCODE_STORE: begin
-                        DATA_WRITE_ENABLE = 1'b1;
-                        REG_WRITE = 1'b0;
-                    end
                     `OPCODE_LOAD: DATA_REQ = 1'b1;
                     `OPCODE_MRET: MRET = 1'b1;
                     `OPCODE_BRANCH: if (ALU_CMP === 1'b1) BRANCH = 1'b1;

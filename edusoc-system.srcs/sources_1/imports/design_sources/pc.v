@@ -7,8 +7,10 @@ module pc(
 	input IRQ,
 	input [31:0] IRQ_J_ADR,
 	input mret,
+	input [4:0] IRQ_ID,
 	output reg [31:0] PC_OUT,
-	output reg IRQ_ACK
+	output reg IRQ_ACK,
+	output reg [4:0] IRQ_ACK_ID
 	);
 	reg [31:0] adr_store;
 	

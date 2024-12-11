@@ -14,15 +14,35 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,632.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,277.001 ns"></ZoomEndTime>
-      <Cursor1Time time="4,225.000 ns"></Cursor1Time>
+      <ZoomStartTime time="3,993.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,666.001 ns"></ZoomEndTime>
+      <Cursor1Time time="4,785.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <NameColumnWidth column_width="137"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="11" />
+   <wvobject type="logic" fp_name="/system/data_we">
+      <obj_property name="ElementShortName">data_we</obj_property>
+      <obj_property name="ObjectShortName">data_we</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/data_adr">
+      <obj_property name="ElementShortName">data_adr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_adr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/data_write">
+      <obj_property name="ElementShortName">data_write[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_write[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/data_read">
+      <obj_property name="ElementShortName">data_read[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_read[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system/data_valid">
+      <obj_property name="ElementShortName">data_valid</obj_property>
+      <obj_property name="ObjectShortName">data_valid</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group25">
       <obj_property name="label">proc</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -55,17 +75,39 @@
          <obj_property name="ElementShortName">instr[31:0]</obj_property>
          <obj_property name="ObjectShortName">instr[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/soc/DATA_ADDR">
-         <obj_property name="ElementShortName">DATA_ADDR[31:0]</obj_property>
-         <obj_property name="ObjectShortName">DATA_ADDR[31:0]</obj_property>
+      <wvobject type="array" fp_name="/system/proc/data_adr">
+         <obj_property name="ElementShortName">data_adr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_adr[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/system/data_req">
          <obj_property name="ElementShortName">data_req</obj_property>
          <obj_property name="ObjectShortName">data_req</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/system/data_we">
          <obj_property name="ElementShortName">data_we</obj_property>
          <obj_property name="ObjectShortName">data_we</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/data_write">
+         <obj_property name="ElementShortName">data_write[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_write[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/data_read">
+         <obj_property name="ElementShortName">data_read[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_read[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/data_valid">
+         <obj_property name="ElementShortName">data_valid</obj_property>
+         <obj_property name="ObjectShortName">data_valid</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group37">
@@ -150,10 +192,6 @@
          <obj_property name="ElementShortName">REG_WRITE</obj_property>
          <obj_property name="ObjectShortName">REG_WRITE</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/system/proc/ctrl/ALU_CMP">
-         <obj_property name="ElementShortName">ALU_CMP</obj_property>
-         <obj_property name="ObjectShortName">ALU_CMP</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group89">
       <obj_property name="label">Program Counter</obj_property>
@@ -183,6 +221,10 @@
       <wvobject type="array" fp_name="/system/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/pc_d_src_sel/S">
+         <obj_property name="ElementShortName">S</obj_property>
+         <obj_property name="ObjectShortName">S</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
