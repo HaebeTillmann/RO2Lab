@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Dec 11 15:48:10 2024
+| Date         : Wed Dec 11 16:07:35 2024
 | Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
@@ -22,10 +22,10 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       5443 |       5411 |       0 |   32 | 2680 |     75 |      0 |          0 |
+| system                                                      |                                     (top) |       5444 |       5412 |       0 |   32 | 2680 |     75 |      0 |          0 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   proc                                                      |                                      proc |       1502 |       1502 |       0 |    0 | 1093 |      0 |      0 |          0 |
-|     (proc)                                                  |                                      proc |         78 |         78 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   proc                                                      |                                      proc |       1503 |       1503 |       0 |    0 | 1093 |      0 |      0 |          0 |
+|     (proc)                                                  |                                      proc |         79 |         79 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu                                                     |                                       alu |        568 |        568 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu_a_src_sel                                           |                             MUX_2x1_32__3 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
