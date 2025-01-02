@@ -14,15 +14,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="24.731150 us"></ZoomEndTime>
-      <Cursor1Time time="8.100000 us"></Cursor1Time>
+      <ZoomStartTime time="2,505.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,279.001 ns"></ZoomEndTime>
+      <Cursor1Time time="4,577.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="207"></ValueColumnWidth>
+      <ValueColumnWidth column_width="195"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="15" />
    <wvobject type="logic" fp_name="/system/irq">
       <obj_property name="ElementShortName">irq</obj_property>
       <obj_property name="ObjectShortName">irq</obj_property>
@@ -106,6 +106,18 @@
          <obj_property name="ObjectShortName">data_valid</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject type="array" fp_name="/system/soc/DATA_RDATA">
+      <obj_property name="ElementShortName">DATA_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system/soc/DATA_REQ">
+      <obj_property name="ElementShortName">DATA_REQ</obj_property>
+      <obj_property name="ObjectShortName">DATA_REQ</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/soc/DATA_ADDR">
+      <obj_property name="ElementShortName">DATA_ADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_ADDR[31:0]</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group37">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -138,6 +150,7 @@
       <wvobject type="array" fp_name="/system/proc/regset/dat">
          <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/proc/regset/D">
          <obj_property name="ElementShortName">D[31:0]</obj_property>
@@ -231,5 +244,13 @@
          <obj_property name="ElementShortName">S</obj_property>
          <obj_property name="ObjectShortName">S</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/proc/regset_d">
+      <obj_property name="ElementShortName">regset_d[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regset_d[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/proc/regset_d2">
+      <obj_property name="ElementShortName">regset_d2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">regset_d2[31:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -104,7 +104,11 @@ module ctrl(
                 case(INSTR)
                     `OPCODE_LOAD: DATA_REQ = 1'b1;
                     `OPCODE_MRET: MRET = 1'b1;
-                    `OPCODE_BRANCH: if (ALU_CMP === 1'b1) BRANCH = 1'b1;
+                    `OPCODE_BRANCH: begin
+                         if (ALU_CMP === 1'b1) BRANCH = 1'b1;
+                         REG_WRITE = 1'b0;
+                     end
+                    `OPCODE_STORE: REG_WRITE = 1'b0;
                     `OPCODE_JAL: BRANCH = 1'b1;
                     `OPCODE_JALR: BRANCH = 1'b1;
                     default:;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Dec 11 16:07:35 2024
+| Date         : Thu Jan  2 16:18:59 2025
 | Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
@@ -22,15 +22,15 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       5444 |       5412 |       0 |   32 | 2680 |     75 |      0 |          0 |
+| system                                                      |                                     (top) |       5450 |       5418 |       0 |   32 | 2680 |     75 |      0 |          0 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   proc                                                      |                                      proc |       1503 |       1503 |       0 |    0 | 1093 |      0 |      0 |          0 |
+|   proc                                                      |                                      proc |       1509 |       1509 |       0 |    0 | 1093 |      0 |      0 |          0 |
 |     (proc)                                                  |                                      proc |         79 |         79 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu                                                     |                                       alu |        568 |        568 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu                                                     |                                       alu |        573 |        573 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu_a_src_sel                                           |                             MUX_2x1_32__3 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu_b_src_sel                                           |                             MUX_2x1_32__4 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     ctrl                                                    |                                      ctrl |         11 |         11 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     ctrl                                                    |                                      ctrl |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
 |     instr_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     pc                                                      |                                        pc |        104 |        104 |       0 |    0 |   65 |      0 |      0 |          0 |
 |     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
