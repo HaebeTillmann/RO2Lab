@@ -40,6 +40,8 @@ module system (
     wire cpu_res;
     wire instr_valid;
     wire data_valid, instr_req, data_req, data_we, irq, irq_ack;
+    wire cached_instr_req, cached_instr_valid;
+    wire [31:0] cached_instr_adr, cached_instr_read;
     wire [4:0] irq_id, irq_ack_id;
     wire [31:0] pc_out, data_write, data_adr, instr_adr, data_read, instr_read;
 
@@ -76,21 +78,34 @@ module system (
       .IRQ_ACK(1'b0),
       .IRQ_ACK_ID(5'b0)
     );
+    
+    instr_cache cache(
+        .clk(cpu_clk),
+        .res(cpu_res),
+        .cached_instr_req(cached_instr_req),
+        .cached_instr_adr(cached_instr_adr),
+        .cached_instr_valid(cached_instr_valid),
+        .cached_instr_read(cached_instr_read),
+        .instr_req(instr_req),
+        .instr_adr(instr_adr),
+        .instr_valid(instr_valid),
+        .instr_read(instr_read)
+    );
   
     proc proc(
-    .instr_read(instr_read),
+    .instr_read(cached_instr_read),
     .data_read(data_read),
-    .instr_valid(instr_valid),
+    .instr_valid(cached_instr_valid),
     .data_valid(data_valid),
     .CLK(cpu_clk),
     .RES(cpu_res),
     .irq(irq),
     .irq_id(irq_id),
     
-    .pc_out(instr_adr),
+    .pc_out(cached_instr_adr),
     .data_write(data_write),
     .data_adr(data_adr),
-    .instr_req(instr_req),
+    .instr_req(cached_instr_req),
     .data_req(data_req),
     .data_write_enable(data_we),
     .irq_ack(irq_ack),

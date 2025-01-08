@@ -14,15 +14,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2,505.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,279.001 ns"></ZoomEndTime>
-      <Cursor1Time time="4,577.000 ns"></Cursor1Time>
+      <ZoomStartTime time="501.757 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,271.416 ns"></ZoomEndTime>
+      <Cursor1Time time="4,305.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="195"></ValueColumnWidth>
+      <ValueColumnWidth column_width="175"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="20" />
    <wvobject type="logic" fp_name="/system/irq">
       <obj_property name="ElementShortName">irq</obj_property>
       <obj_property name="ObjectShortName">irq</obj_property>
@@ -38,6 +38,73 @@
    <wvobject type="array" fp_name="/system/irq_ack_id">
       <obj_property name="ElementShortName">irq_ack_id[4:0]</obj_property>
       <obj_property name="ObjectShortName">irq_ack_id[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system/soc/INSTR_REQ">
+      <obj_property name="ElementShortName">INSTR_REQ</obj_property>
+      <obj_property name="ObjectShortName">INSTR_REQ</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system/soc/INSTR_VALID">
+      <obj_property name="ElementShortName">INSTR_VALID</obj_property>
+      <obj_property name="ObjectShortName">INSTR_VALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/soc/INSTR_ADDR">
+      <obj_property name="ElementShortName">INSTR_ADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INSTR_ADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/soc/INSTR_RDATA">
+      <obj_property name="ElementShortName">INSTR_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INSTR_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group596">
+      <obj_property name="label">Cache</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/system/cache/hit">
+         <obj_property name="ElementShortName">hit</obj_property>
+         <obj_property name="ObjectShortName">hit</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/cached_instr_read">
+         <obj_property name="ElementShortName">cached_instr_read[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cached_instr_read[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/cache/cached_instr_valid">
+         <obj_property name="ElementShortName">cached_instr_valid</obj_property>
+         <obj_property name="ObjectShortName">cached_instr_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/cache/instr_req">
+         <obj_property name="ElementShortName">instr_req</obj_property>
+         <obj_property name="ObjectShortName">instr_req</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/instr_adr">
+         <obj_property name="ElementShortName">instr_adr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr_adr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/cache/instr_valid">
+         <obj_property name="ElementShortName">instr_valid</obj_property>
+         <obj_property name="ObjectShortName">instr_valid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/instr_read">
+         <obj_property name="ElementShortName">instr_read[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr_read[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/valids">
+         <obj_property name="ElementShortName">valids[15:0]</obj_property>
+         <obj_property name="ObjectShortName">valids[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/index">
+         <obj_property name="ElementShortName">index[3:0]</obj_property>
+         <obj_property name="ObjectShortName">index[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/tags">
+         <obj_property name="ElementShortName">tags[15:0][27:0]</obj_property>
+         <obj_property name="ObjectShortName">tags[15:0][27:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/cache/lines">
+         <obj_property name="ElementShortName">lines[15:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">lines[15:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group25">
       <obj_property name="label">proc</obj_property>
@@ -58,10 +125,6 @@
       <wvobject type="array" fp_name="/system/instr_adr">
          <obj_property name="ElementShortName">instr_adr[31:0]</obj_property>
          <obj_property name="ObjectShortName">instr_adr[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/instr_read">
-         <obj_property name="ElementShortName">instr_read[31:0]</obj_property>
-         <obj_property name="ObjectShortName">instr_read[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/system/proc/instr_valid">
          <obj_property name="ElementShortName">instr_valid</obj_property>
@@ -121,7 +184,6 @@
    <wvobject type="group" fp_name="group37">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/alu/A">
          <obj_property name="ElementShortName">A[31:0]</obj_property>
          <obj_property name="ObjectShortName">A[31:0]</obj_property>
@@ -146,7 +208,6 @@
    <wvobject type="group" fp_name="group43">
       <obj_property name="label">Regset</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/regset/dat">
          <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
@@ -234,7 +295,6 @@
    <wvobject type="group" fp_name="group94">
       <obj_property name="label">Imm Gen</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Jan  2 16:18:59 2025
+| Date         : Wed Jan  8 11:27:36 2025
 | Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
@@ -22,24 +22,25 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       5450 |       5418 |       0 |   32 | 2680 |     75 |      0 |          0 |
+| system                                                      |                                     (top) |       5641 |       5551 |      58 |   32 | 2744 |     75 |      0 |          0 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   proc                                                      |                                      proc |       1509 |       1509 |       0 |    0 | 1093 |      0 |      0 |          0 |
+|   cache                                                     |                               instr_cache |        193 |        135 |      58 |    0 |   64 |      0 |      0 |          0 |
+|   proc                                                      |                                      proc |       1508 |       1508 |       0 |    0 | 1093 |      0 |      0 |          0 |
 |     (proc)                                                  |                                      proc |         79 |         79 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu                                                     |                                       alu |        573 |        573 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu_a_src_sel                                           |                             MUX_2x1_32__3 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu_b_src_sel                                           |                             MUX_2x1_32__4 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     ctrl                                                    |                                      ctrl |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     ctrl                                                    |                                      ctrl |         11 |         11 |       0 |    0 |    4 |      0 |      0 |          0 |
 |     instr_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     pc                                                      |                                        pc |        104 |        104 |       0 |    0 |   65 |      0 |      0 |          0 |
 |     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     regset                                                  |                                    regset |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
 |     regset_d2_src_sel                                       |                             MUX_2x1_32__2 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     regset_d_src_sel                                        |                             MUX_2x1_32__1 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   soc                                                       |                              edusoc_basic |       3877 |       3845 |       0 |   32 | 1587 |     75 |      0 |          0 |
+|   soc                                                       |                              edusoc_basic |       3876 |       3844 |       0 |   32 | 1587 |     75 |      0 |          0 |
 |     (soc)                                                   |                              edusoc_basic |         70 |         70 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     soc                                                     |                                    edusoc |       3807 |       3775 |       0 |   32 | 1587 |     75 |      0 |          0 |
+|     soc                                                     |                                    edusoc |       3806 |       3774 |       0 |   32 | 1587 |     75 |      0 |          0 |
 |       (soc)                                                 |                                    edusoc |        161 |        161 |       0 |    0 |    0 |      0 |      0 |          0 |
 |       boot_rom                                              |                          soc_memory_block |         84 |         84 |       0 |    0 |   15 |      2 |      0 |          0 |
 |         (boot_rom)                                          |                          soc_memory_block |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
@@ -50,8 +51,8 @@ Table of Contents
 |       clk_rst_gen                                           |                           soc_clock_reset |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
 |         (clk_rst_gen)                                       |                           soc_clock_reset |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
 |         reset_gen                                           |                          proc_sys_reset_0 |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
-|       interconnect_i                                        |                          soc_interconnect |        663 |        663 |       0 |    0 |   28 |      0 |      0 |          0 |
-|         (interconnect_i)                                    |                          soc_interconnect |        607 |        607 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       interconnect_i                                        |                          soc_interconnect |        662 |        662 |       0 |    0 |   28 |      0 |      0 |          0 |
+|         (interconnect_i)                                    |                          soc_interconnect |        606 |        606 |       0 |    0 |    0 |      0 |      0 |          0 |
 |         slave_gen[0].conflict_resolver                      |                     soc_rrprio_encoder__1 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
 |         slave_gen[1].conflict_resolver                      |                     soc_rrprio_encoder__2 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
 |         slave_gen[2].conflict_resolver                      |                     soc_rrprio_encoder__3 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
