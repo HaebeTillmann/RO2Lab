@@ -83,7 +83,7 @@ module proc(
     
 
     alu alu(
-        .S(instr[6:0] == `OPCODE_AUIPC?8'b00000001:instr[6:0] == `OPCODE_LUI?8'b0:{((instr[6:0] == `OPCODE_OPIMM && instr[14:12] == 3'b101) || instr[6:0] == `OPCODE_OP)?instr[30]:0, instr[14:12], instr[6], instr[4]}),
+        .S(instr[7:0] == `OPCODE_AUIPC?8'b00000001:instr[6:0] == `OPCODE_LUI?8'b0:{((instr[6:0] == `OPCODE_OPIMM && instr[14:12] == 3'b101) || instr[6:0] == `OPCODE_OP)?instr[30]:0, {((instr[6:0] == 7'b0110011) && instr[25])?1'b1:1'b0}, instr[14:12], instr[6], instr[4]}),
         .A(alu_a),
         .B(alu_b),
         .CMP(alu_cmp),

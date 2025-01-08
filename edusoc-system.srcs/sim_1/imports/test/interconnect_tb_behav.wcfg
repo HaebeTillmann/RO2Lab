@@ -14,13 +14,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="501.757 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,271.416 ns"></ZoomEndTime>
-      <Cursor1Time time="4,305.000 ns"></Cursor1Time>
+      <ZoomStartTime time="10.376170 us"></ZoomStartTime>
+      <ZoomEndTime time="16.044767 us"></ZoomEndTime>
+      <Cursor1Time time="15.100000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="175"></ValueColumnWidth>
+      <ValueColumnWidth column_width="171"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="20" />
    <wvobject type="logic" fp_name="/system/irq">
@@ -88,22 +88,20 @@
          <obj_property name="ObjectShortName">instr_read[31:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/cache/valids">
-         <obj_property name="ElementShortName">valids[15:0]</obj_property>
-         <obj_property name="ObjectShortName">valids[15:0]</obj_property>
+         <obj_property name="ElementShortName">valids[63:0]</obj_property>
+         <obj_property name="ObjectShortName">valids[63:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/cache/index">
-         <obj_property name="ElementShortName">index[3:0]</obj_property>
-         <obj_property name="ObjectShortName">index[3:0]</obj_property>
+         <obj_property name="ElementShortName">index[5:0]</obj_property>
+         <obj_property name="ObjectShortName">index[5:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/cache/tags">
-         <obj_property name="ElementShortName">tags[15:0][27:0]</obj_property>
-         <obj_property name="ObjectShortName">tags[15:0][27:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+         <obj_property name="ElementShortName">tags[63:0][25:0]</obj_property>
+         <obj_property name="ObjectShortName">tags[63:0][25:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/cache/lines">
-         <obj_property name="ElementShortName">lines[15:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">lines[15:0][31:0]</obj_property>
-         <obj_property name="isExpanded"></obj_property>
+         <obj_property name="ElementShortName">lines[63:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">lines[63:0][31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group25">
@@ -193,8 +191,8 @@
          <obj_property name="ObjectShortName">B[31:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/proc/alu/S">
-         <obj_property name="ElementShortName">S[6:0]</obj_property>
-         <obj_property name="ObjectShortName">S[6:0]</obj_property>
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/proc/alu/Q">
          <obj_property name="ElementShortName">Q[31:0]</obj_property>

@@ -1,23 +1,27 @@
-`define ALU_NEN 7'b0000000
-`define ALU_ADD 7'b0000001
-`define ALU_SUB 7'b0100001
-`define ALU_AND 7'b0011101
-`define ALU_OR 7'b0011001
-`define ALU_XOR 7'b0010001
-`define ALU_SLL 7'b0000101
-`define ALU_SRA 7'b0110101
-`define ALU_SRL 7'b0010101
-`define ALU_SLT 7'b0001001
-`define ALU_SLTU 7'b0001101
-`define ALU_EQ 7'b0?00010
-`define ALU_NE 7'b0?00110
-`define ALU_LT 7'b0?10010
-`define ALU_GE 7'b0?10110
-`define ALU_LTU 7'b0?11010
-`define ALU_GEU 7'b0?11110
+// AUIPC, LUI, IMM, MUL, ...
+
+`define ALU_NEN 7'b00000000
+`define ALU_ADD 7'b00000001
+`define ALU_MUL 7'b00100001
+`define ALU_SUB 7'b01000001
+`define ALU_AND 7'b00011101
+`define ALU_OR 7'b00011001
+`define ALU_XOR 7'b00010001
+`define ALU_SLL 7'b00000101
+`define ALU_SRA 7'b01010101
+`define ALU_SRL 7'b00010101
+`define ALU_SLT 7'b00001001
+`define ALU_SLTU 7'b00001101
+`define ALU_EQ 7'b0?000010
+`define ALU_NE 7'b0?000110
+`define ALU_LT 7'b0?010010
+`define ALU_GE 7'b0?010110
+`define ALU_LTU 7'b0?011010
+`define ALU_GEU 7'b0?011110
+
 
 module alu(
-	input [6:0] S,
+	input [7:0] S,
 	input signed [31:0] A,
 	input signed [31:0] B,
 	output reg CMP,
@@ -46,6 +50,7 @@ module alu(
 			`ALU_LTU: CMP = $unsigned(A) < $unsigned(B);
 			`ALU_GEU: CMP = $unsigned(A) >= $unsigned(B);
 			`ALU_NEN: Q = B;
+			`ALU_MUL: Q = A * B;
 			default: begin
 			     Q = 32'h0;
 			     CMP = 0;
