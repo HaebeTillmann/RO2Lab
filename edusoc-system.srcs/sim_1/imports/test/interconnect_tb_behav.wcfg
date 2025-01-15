@@ -14,51 +14,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10.376170 us"></ZoomStartTime>
-      <ZoomEndTime time="16.044767 us"></ZoomEndTime>
-      <Cursor1Time time="15.100000 us"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,100.001 ns"></ZoomEndTime>
+      <Cursor1Time time="5,100.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="171"></ValueColumnWidth>
+      <ValueColumnWidth column_width="159"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
-   <wvobject type="logic" fp_name="/system/irq">
-      <obj_property name="ElementShortName">irq</obj_property>
-      <obj_property name="ObjectShortName">irq</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/irq_ack">
-      <obj_property name="ElementShortName">irq_ack</obj_property>
-      <obj_property name="ObjectShortName">irq_ack</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/irq_id">
-      <obj_property name="ElementShortName">irq_id[4:0]</obj_property>
-      <obj_property name="ObjectShortName">irq_id[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/irq_ack_id">
-      <obj_property name="ElementShortName">irq_ack_id[4:0]</obj_property>
-      <obj_property name="ObjectShortName">irq_ack_id[4:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/soc/INSTR_REQ">
-      <obj_property name="ElementShortName">INSTR_REQ</obj_property>
-      <obj_property name="ObjectShortName">INSTR_REQ</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/soc/INSTR_VALID">
-      <obj_property name="ElementShortName">INSTR_VALID</obj_property>
-      <obj_property name="ObjectShortName">INSTR_VALID</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/soc/INSTR_ADDR">
-      <obj_property name="ElementShortName">INSTR_ADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">INSTR_ADDR[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/soc/INSTR_RDATA">
-      <obj_property name="ElementShortName">INSTR_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">INSTR_RDATA[31:0]</obj_property>
-   </wvobject>
+   <WVObjectSize size="7" />
    <wvobject type="group" fp_name="group596">
       <obj_property name="label">Cache</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/system/cache/hit">
          <obj_property name="ElementShortName">hit</obj_property>
          <obj_property name="ObjectShortName">hit</obj_property>
@@ -166,46 +133,23 @@
          <obj_property name="ElementShortName">data_valid</obj_property>
          <obj_property name="ObjectShortName">data_valid</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/soc/DATA_RDATA">
-      <obj_property name="ElementShortName">DATA_RDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_RDATA[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/soc/DATA_REQ">
-      <obj_property name="ElementShortName">DATA_REQ</obj_property>
-      <obj_property name="ObjectShortName">DATA_REQ</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/soc/DATA_ADDR">
-      <obj_property name="ElementShortName">DATA_ADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_ADDR[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="group" fp_name="group37">
-      <obj_property name="label">ALU</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/system/proc/alu/A">
-         <obj_property name="ElementShortName">A[31:0]</obj_property>
-         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      <wvobject type="array" fp_name="/system/soc/DATA_RDATA">
+         <obj_property name="ElementShortName">DATA_RDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_RDATA[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/B">
-         <obj_property name="ElementShortName">B[31:0]</obj_property>
-         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      <wvobject type="logic" fp_name="/system/soc/DATA_REQ">
+         <obj_property name="ElementShortName">DATA_REQ</obj_property>
+         <obj_property name="ObjectShortName">DATA_REQ</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/S">
-         <obj_property name="ElementShortName">S[7:0]</obj_property>
-         <obj_property name="ObjectShortName">S[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/Q">
-         <obj_property name="ElementShortName">Q[31:0]</obj_property>
-         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/system/proc/alu/CMP">
-         <obj_property name="ElementShortName">CMP</obj_property>
-         <obj_property name="ObjectShortName">CMP</obj_property>
+      <wvobject type="array" fp_name="/system/soc/DATA_ADDR">
+         <obj_property name="ElementShortName">DATA_ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_ADDR[31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group43">
       <obj_property name="label">Regset</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/regset/dat">
          <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
@@ -240,10 +184,33 @@
          <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject type="group" fp_name="group37">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/system/proc/alu/A">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu/B">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu/S">
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/alu/CMP">
+         <obj_property name="ElementShortName">CMP</obj_property>
+         <obj_property name="ObjectShortName">CMP</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject type="group" fp_name="group84">
       <obj_property name="label">Control Logic</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/ctrl/state">
          <obj_property name="ElementShortName">state[3:0]</obj_property>
          <obj_property name="ObjectShortName">state[3:0]</obj_property>
@@ -264,7 +231,6 @@
    <wvobject type="group" fp_name="group89">
       <obj_property name="label">Program Counter</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/system/proc/pc/MODE">
          <obj_property name="ElementShortName">MODE</obj_property>
          <obj_property name="ObjectShortName">MODE</obj_property>
@@ -302,13 +268,13 @@
          <obj_property name="ElementShortName">S</obj_property>
          <obj_property name="ObjectShortName">S</obj_property>
       </wvobject>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/regset_d">
-      <obj_property name="ElementShortName">regset_d[31:0]</obj_property>
-      <obj_property name="ObjectShortName">regset_d[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/regset_d2">
-      <obj_property name="ElementShortName">regset_d2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">regset_d2[31:0]</obj_property>
+      <wvobject type="array" fp_name="/system/proc/regset_d3_src_sel/I1">
+         <obj_property name="ElementShortName">I1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">I1[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset_d3">
+         <obj_property name="ElementShortName">regset_d3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">regset_d3[31:0]</obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

@@ -24,7 +24,8 @@ module proc(
     wire branch;
     wire pc_enable;
     wire mret;
-    wire [31:0] pc_d, regset_d, regset_d2;
+    wire [31:0] pc_d, regset_d, regset_d2, regset_d3;
+    wire [31:0] csr_read;
     
     assign data_adr = regset_q0 + imm;
     assign data_write = regset_q1;
@@ -50,9 +51,16 @@ module proc(
         .S(instr[6:0] == `OPCODE_LOAD),
         .Y(regset_d2)
     );
+    
+    MUX_2x1_32 regset_d3_src_sel(
+        .I0(regset_d2),
+        .I1(csr_read),
+        .S(instr[6:0] == 7'h73 && instr[14:12] == 3'b010),
+        .Y(regset_d3)
+    );
 
     regset regset(
-        .D(regset_d2),
+        .D(regset_d3),
         .A_D(instr[11:7]),
         .A_Q0(instr[19:15]),
         .A_Q1(instr[24:20]),
@@ -126,5 +134,13 @@ module proc(
         .DATA_WRITE_ENABLE(data_write_enable),
         .PC_ENABLE(pc_enable),
         .MRET(mret)
+    );
+    
+    csr csr(
+        .CLK(CLK),
+        .RES(RES),
+        .RDINSTRET_EN(pc_enable),
+        .CSR_ADR(instr[31:20]),
+        .CSR_READ(csr_read)
     );
 endmodule
