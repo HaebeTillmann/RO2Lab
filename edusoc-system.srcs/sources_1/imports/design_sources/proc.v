@@ -54,7 +54,7 @@ module proc(
     
     MUX_2x1_32 regset_d3_src_sel(
         .I0(regset_d2),
-        .I1(csr_read),
+        .I1(csr_read | regset_q0),
         .S(instr[6:0] == 7'h73 && instr[14:12] == 3'b010),
         .Y(regset_d3)
     );
