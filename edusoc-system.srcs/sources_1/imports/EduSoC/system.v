@@ -48,6 +48,12 @@ module system (
     wire [2:0] s;
     wire [31:0] data_read_mem, data_adr_mem, data_write_mem;
     wire [3:0] data_be_mem;
+    
+    wire instr_req_1, instr_valid_1;
+    wire data_req_1, data_valid_1, data_we_1;
+    wire [31:0] instr_addr_1, instr_rdata_1;
+    wire [31:0] data_addr_1, data_wdata_1, data_rdata_1;
+    wire [2:0] s_1;
 
     edusoc_basic soc (
       .BOARD_CLK(BOARD_CLK),
@@ -66,6 +72,7 @@ module system (
       .BOARD_UART_TX(BOARD_UART_TX),
       .CPU_CLK(cpu_clk),
       .CPU_RES(cpu_res),
+      
       .INSTR_REQ(instr_req),
       .INSTR_VALID(instr_valid),
       .INSTR_ADDR(instr_adr),
@@ -124,28 +131,61 @@ module system (
         .DATA_WE_MEM(data_we_mem),
         .DATA_BE_MEM(data_be_mem)
     );
+    
+    dualCoreMemBus memBus(
+        .CLK(cpu_clk),
+        .RES(cpu_res),
+        
+        // Instruction memory
+        .INSTR_REQ_1(instr_req_1),
+        .INSTR_VALID_1(instr_valid_1),
+        .INSTR_ADDR_1(instr_addr_1),
+        .INSTR_RDATA_1(instr_rdata_1),
+        
+        .INSTR_REQ(cached_instr_req),
+        .INSTR_VALID(cached_instr_valid),
+        .INSTR_ADDR(cached_instr_adr),
+        .INSTR_RDATA(cached_instr_read),
+        
+        // Data memory
+        .DATA_REQ_1(data_req_1),
+        .DATA_VALID_1(data_valid_1),
+        .DATA_WE_1(data_we_1),
+        .DATA_ADDR_1(data_addr_1),
+        .DATA_WDATA_1(data_wdata_1),
+        .DATA_RDATA_1(data_rdata_1),
+        .S_1(s_1),
+        
+        .DATA_REQ(data_req),
+        .DATA_VALID(data_valid),
+        .DATA_WE(data_we),
+        .DATA_ADDR(data_adr),
+        .DATA_WDATA(data_write),
+        .DATA_RDATA(data_read),
+        .S()
+    );
   
     proc proc(
-    .instr_read(cached_instr_read),
-    .data_read(data_read),
-    .instr_valid(cached_instr_valid),
-    .data_valid(data_valid),
-    .CLK(cpu_clk),
-    .RES(cpu_res),
-    .irq(irq),
-    .irq_id(irq_id),
-    
-    .pc_out(cached_instr_adr),
-    .data_write(data_write),
-    .data_adr(data_adr),
-    .instr_req(cached_instr_req),
-    .data_req(data_req),
-    .data_write_enable(data_we),
-    .irq_ack(irq_ack),
-    .irq_ack_id(irq_ack_id),
-    .s(s)
+        .instr_read(instr_rdata_1),
+        .data_read(data_rdata_1),
+        .instr_valid(instr_valid_1),
+        .data_valid(data_valid_1),
+        .CLK(cpu_clk),
+        .RES(cpu_res),
+        .irq(irq),
+        .irq_id(irq_id),
+        
+        .pc_out(instr_addr_1),
+        .data_write(data_wdata_1),
+        .data_adr(data_addr_1),
+        .instr_req(instr_req_1),
+        .data_req(data_req_1),
+        .data_write_enable(data_we_1),
+        .irq_ack(irq_ack),
+        .irq_ack_id(irq_ack_id),
+        .s(s)
     );
-    
+
     `ifdef XILINX_SIMULATOR
         reg clk;
         initial
