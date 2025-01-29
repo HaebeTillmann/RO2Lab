@@ -10,7 +10,8 @@ module proc(
     output instr_req, data_req, data_write_enable,irq_ack,
     output [4:0] irq_ack_id,
     output [31:0] pc_out, data_write,
-    output [31:0] data_adr
+    output [31:0] data_adr,
+    output [2:0] s
     );
     
     wire [31:0] instr;
@@ -29,6 +30,8 @@ module proc(
     
     assign data_adr = regset_q0 + imm;
     assign data_write = regset_q1;
+    
+    assign s = instr[14:12];
     
     REG_DRE_32 instr_buffer(
         .D(instr_read),

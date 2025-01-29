@@ -14,15 +14,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,100.001 ns"></ZoomEndTime>
-      <Cursor1Time time="5,100.000 ns"></Cursor1Time>
+      <ZoomStartTime time="4.243480 us"></ZoomStartTime>
+      <ZoomEndTime time="13.671305 us"></ZoomEndTime>
+      <Cursor1Time time="9.296745 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="292"></NameColumnWidth>
-      <ValueColumnWidth column_width="159"></ValueColumnWidth>
+      <NameColumnWidth column_width="249"></NameColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="13" />
    <wvobject type="group" fp_name="group596">
       <obj_property name="label">Cache</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -70,11 +70,104 @@
          <obj_property name="ElementShortName">lines[63:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">lines[63:0][31:0]</obj_property>
       </wvobject>
+      <wvobject type="logic" fp_name="/system/cache/cached_instr_req">
+         <obj_property name="ElementShortName">cached_instr_req</obj_property>
+         <obj_property name="ObjectShortName">cached_instr_req</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/soc/BOARD_CLK">
+         <obj_property name="ElementShortName">BOARD_CLK</obj_property>
+         <obj_property name="ObjectShortName">BOARD_CLK</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/soc/DATA_REQ">
+         <obj_property name="ElementShortName">DATA_REQ</obj_property>
+         <obj_property name="ObjectShortName">DATA_REQ</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1305">
+      <obj_property name="label">Memory Acess</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system/memoryacces/ADDR">
+         <obj_property name="ElementShortName">ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/memoryacces/DATA_REQ">
+         <obj_property name="ElementShortName">DATA_REQ</obj_property>
+         <obj_property name="ObjectShortName">DATA_REQ</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/memoryacces/WRITE_ENABLE">
+         <obj_property name="ElementShortName">WRITE_ENABLE</obj_property>
+         <obj_property name="ObjectShortName">WRITE_ENABLE</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_WRITE">
+         <obj_property name="ElementShortName">DATA_WRITE[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_WRITE[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_WRITE_MEM">
+         <obj_property name="ElementShortName">DATA_WRITE_MEM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_WRITE_MEM[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_BE_MEM">
+         <obj_property name="ElementShortName">DATA_BE_MEM[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_BE_MEM[3:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/S">
+         <obj_property name="ElementShortName">S[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/s">
+         <obj_property name="ElementShortName">s[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_BE_MEM">
+         <obj_property name="ElementShortName">DATA_BE_MEM[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_BE_MEM[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/S">
+         <obj_property name="ElementShortName">S[2:0]</obj_property>
+         <obj_property name="ObjectShortName">S[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_ADR_MEM">
+         <obj_property name="ElementShortName">DATA_ADR_MEM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_ADR_MEM[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_READ_MEM">
+         <obj_property name="ElementShortName">DATA_READ_MEM[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_READ_MEM[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/ADDR">
+         <obj_property name="ElementShortName">ADDR[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/s">
+         <obj_property name="ElementShortName">s[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s[2:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/memoryacces/read1">
+      <obj_property name="ElementShortName">read1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/memoryacces/read2">
+      <obj_property name="ElementShortName">read2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/memoryacces/DATA_READ">
+      <obj_property name="ElementShortName">DATA_READ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_READ[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/memoryacces/data_load_table/in_2x3">
+      <obj_property name="ElementShortName">in_2x3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">in_2x3[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/system/memoryacces/data_load_table/selected">
+      <obj_property name="ElementShortName">selected[31:0]</obj_property>
+      <obj_property name="ObjectShortName">selected[31:0]</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group25">
       <obj_property name="label">proc</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/system/proc/CLK">
          <obj_property name="ElementShortName">CLK</obj_property>
          <obj_property name="ObjectShortName">CLK</obj_property>

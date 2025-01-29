@@ -44,6 +44,10 @@ module system (
     wire [31:0] cached_instr_adr, cached_instr_read;
     wire [4:0] irq_id, irq_ack_id;
     wire [31:0] pc_out, data_write, data_adr, instr_adr, data_read, instr_read;
+    wire data_valid_mem, data_req_mem, data_we_mem;
+    wire [2:0] s;
+    wire [31:0] data_read_mem, data_adr_mem, data_write_mem;
+    wire [3:0] data_be_mem;
 
     edusoc_basic soc (
       .BOARD_CLK(BOARD_CLK),
@@ -66,13 +70,15 @@ module system (
       .INSTR_VALID(instr_valid),
       .INSTR_ADDR(instr_adr),
       .INSTR_RDATA(instr_read),
-      .DATA_REQ(data_req),
-      .DATA_VALID(data_valid),
-      .DATA_WE(data_we),
-      .DATA_BE(4'b1111),
-      .DATA_ADDR(data_adr),
-      .DATA_WDATA(data_write),
-      .DATA_RDATA(data_read),
+      
+      .DATA_REQ(data_req_mem),
+      .DATA_VALID(data_valid_mem),
+      .DATA_WE(data_we_mem),
+      .DATA_BE(data_be_mem),
+      .DATA_ADDR(data_adr_mem),
+      .DATA_WDATA(data_write_mem),
+      .DATA_RDATA(data_read_mem),
+      
       .IRQ(irq),
       .IRQ_ID(irq_id),
       .IRQ_ACK(1'b0),
@@ -90,6 +96,33 @@ module system (
         .instr_adr(instr_adr),
         .instr_valid(instr_valid),
         .instr_read(instr_read)
+    );
+    
+    memoryacces memoryacces(
+        .CLK(cpu_clk),
+        .RES(cpu_res),
+    
+        // von CPU
+        .ADDR(data_adr),
+        .DATA_WRITE(data_write),
+        .DATA_REQ(data_req),
+        .S(s),
+        .WRITE_ENABLE(data_we),
+    
+        // von Speicher
+        .DATA_READ_MEM(data_read_mem),
+        .DATA_VALID_MEM(data_valid_mem),
+    
+        // zu CPU
+        .DATA_READ(data_read),
+        .DATA_VALID(data_valid),
+    
+        // Zu Speicher
+        .DATA_ADR_MEM(data_adr_mem),
+        .DATA_WRITE_MEM(data_write_mem),
+        .DATA_REQ_MEM(data_req_mem),
+        .DATA_WE_MEM(data_we_mem),
+        .DATA_BE_MEM(data_be_mem)
     );
   
     proc proc(
@@ -109,7 +142,8 @@ module system (
     .data_req(data_req),
     .data_write_enable(data_we),
     .irq_ack(irq_ack),
-    .irq_ack_id(irq_ack_id)
+    .irq_ack_id(irq_ack_id),
+    .s(s)
     );
     
     `ifdef XILINX_SIMULATOR
