@@ -1,12 +1,12 @@
 module csr(
     input CLK, RES, RDINSTRET_EN,
     input [11:0] CSR_ADR,
-    output reg [31:0] CSR_READ
+    output reg [31:0] CSR_READ,
+    input [31:0] CORE_ID
     );
     
     reg [63:0] RDCYCLE, RDTIME, RDINSTRET;
     reg [15:0] MSCOUNT;
-    reg [31:0] MHARTID;
     
     always @(posedge CLK) begin
         if (RES) begin
@@ -30,7 +30,7 @@ module csr(
             'hC81: CSR_READ = RDTIME[63:32];
             'hC02: CSR_READ = RDINSTRET[31:0];
             'hC82: CSR_READ = RDINSTRET[63:32];
-            'hF14: CSR_READ = 32'b0;
+            'hF14: CSR_READ = CORE_ID;
             default: CSR_READ = 32'b0;
         endcase
     end
