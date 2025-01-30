@@ -127,7 +127,7 @@ module proc(
         .INSTR(instr[6:0]),
         .REG_WRITE(regset_we),
         .INSTR_REQ(instr_req),
-        .BRANCH(brancore_idch),
+        .BRANCH(branch),
         .CLK(CLK),
         .RES(RES),
         .INSTR_VALID(instr_valid),

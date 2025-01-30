@@ -201,8 +201,10 @@ module system (
         .instr_req(instr_req_1),
         .data_req(data_req_1),
         .data_write_enable(data_we_1),
+        
         .irq_ack(irq_ack),
         .irq_ack_id(irq_ack_id),
+        
         .s(s_1)
     );
     
@@ -223,8 +225,10 @@ module system (
         .instr_req(instr_req_2),
         .data_req(data_req_2),
         .data_write_enable(data_we_2),
-        .irq_ack(irq_ack),
-        .irq_ack_id(irq_ack_id),
+        
+        .irq_ack(),
+        .irq_ack_id(),
+        
         .s(s_2)
     );
     

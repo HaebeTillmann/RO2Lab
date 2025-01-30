@@ -14,13 +14,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,518.001 ns"></ZoomEndTime>
-      <Cursor1Time time="3,945.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1.916667 us"></ZoomStartTime>
+      <ZoomEndTime time="14.016667 us"></ZoomEndTime>
+      <Cursor1Time time="12.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="244"></NameColumnWidth>
-      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+      <NameColumnWidth column_width="235"></NameColumnWidth>
+      <ValueColumnWidth column_width="106"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="11" />
    <wvobject type="group" fp_name="group596">
@@ -355,6 +355,8 @@
       <wvobject type="array" fp_name="/system/proc/pc/PC_OUT">
          <obj_property name="ElementShortName">PC_OUT[31:0]</obj_property>
          <obj_property name="ObjectShortName">PC_OUT[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/proc/pc/IRQ_J_ADR">
          <obj_property name="ElementShortName">IRQ_J_ADR[31:0]</obj_property>
@@ -364,14 +366,19 @@
          <obj_property name="ElementShortName">IRQ</obj_property>
          <obj_property name="ObjectShortName">IRQ</obj_property>
       </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/pc/mret">
+         <obj_property name="ElementShortName">mret</obj_property>
+         <obj_property name="ObjectShortName">mret</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group94">
       <obj_property name="label">Imm Gen</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/system/proc/pc_d_src_sel/S">
          <obj_property name="ElementShortName">S</obj_property>
