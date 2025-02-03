@@ -120,7 +120,7 @@ module dualCoreMemBus(
                 DATA_WDATA = DATA_WDATA_1;
                 S = S_1;
                 
-                if (DATA_VALID) next_state_dat <= Z0;
+                if (!DATA_REQ_1) next_state_dat <= Z0;
                 else next_state_dat <= Z1;
             end
             Z2: begin
@@ -131,7 +131,7 @@ module dualCoreMemBus(
                 DATA_WDATA = DATA_WDATA_2;
                 S = S_2;
                 
-                if (DATA_VALID) next_state_dat <= Z0;
+                if (!DATA_REQ_2) next_state_dat <= Z0;
                 else next_state_dat <= Z2;
             end
         endcase
