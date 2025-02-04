@@ -32,121 +32,93 @@ mret # Interrupt 30
 mret # Interrupt 31
 
 start:
-# fixed point -> x << 8 , except for mult/div
-#   32 Bit: 24MSB -> Int-Part, 8LSB -> fraction
-# s0 : current four pixels
-# s1 : fp_x
-# s2 : fp_x_end
-# s3 : fp_y
-# s4 : fp_y_end
-# s5 : fp_tresh
-# s6 : max_iter
-# s7 : frame_adr
-# s9 : bytes per write - 1
-li s2, 128
+  # Core-ID abrufen
+  csrrs t0, x0,  0xf14 
 
-# fp_y = fp_y_start
-li s3, -180
+  # Basiswerte setzen
+  li s2, 128
+  li s5, 1024
+  li s6, 31
+  li s9, 3
 
-li s4, 180
-li s5, 1024
-li s6, 31
-li s7, 0x1D000000
-li s9, 3
+  # Unterscheidung der Cores
+  beqz t0, core_0_setup
+  j core_1_setup
 
+core_0_setup:
+  li s3, -180  # fp_y für oberen Teil
+  li s4, 0     # fp_y Endwert für oberen Teil
+  li s7, 0x1D000000  # Framebuffer-Adresse für Core 0
+  j compute
+
+core_1_setup:
+  li s3, 0     # fp_y für unteren Teil
+  li s4, 180   # fp_y Endwert für unteren Teil
+  li s7, 0x1D002000  # Framebuffer-Adresse für Core 1
+  j compute
+
+compute:
 y_loop:
-  # fp_x = fp_x_start
-  li s1, -512
-  
+  li s1, -512  # fp_x Startwert
+
 x_loop:
-  # s10 : iter
-  # s11 : x
-  # a7  : y
-  # a6  : sx
-  # a5  : sy
-  # init to zero
-  add s10, x0, x0
-  add s11, x0, x0
-  add a7, x0, x0
-  add a6, x0, x0
-  add a5, x0, x0
-  
+  add s10, x0, x0  # iter = 0
+  add s11, x0, x0  # x = 0
+  add a7, x0, x0   # y = 0
+  add a6, x0, x0   # sx = 0
+  add a5, x0, x0   # sy = 0
+
 iter_loop:
-  # if (sx+sy) >= fp_tresh then leave iter_loop  
   add a0, a5, a6
-  bge a0, s5, iter_end   
-  
-  # if iter = max_iter then leave iter_loop
+  bge a0, s5, iter_end
   beq s10, s6, iter_end
-  
-  # sx = x * x
+
   add a1, x0, s11
   add a2, x0, s11
   jal ra, fp_mul  
-  add a6, a0, x0
-  
-  # sy = y * y
+  add a6, a0, x0  # sx = x * x
+
   add a1, x0, a7
   add a2, x0, a7
   jal ra, fp_mul  
-  add a5, a0, x0
-  
-  # y = 2 * x * y
+  add a5, a0, x0  # sy = y * y
+
   add a1, x0, s11
   add a2, x0, a7
-  jal ra, fp_mul
-  slli a7, a0, 1
-  
-  # y += fp_y
-  add a7, a7, s3
-  # x = sx - sy
-  sub s11, a6, a5
-  # x = x + fp_x
-  add s11, s11, s1
-  # iter = iter + 1
-  addi s10, s10, 1  
-  jal x0, iter_loop
-  
+  jal ra, fp_mul  
+  slli a7, a0, 1  # y = 2 * x * y
+
+  add a7, a7, s3  # y += fp_y
+  sub s11, a6, a5 # x = sx - sy
+  add s11, s11, s1 # x = x + fp_x
+
+  addi s10, s10, 1
+  j iter_loop
+
 iter_end:
-  # make space for another pixel
   srli s0, s0, 8
   slli s10, s10, 24
   or s0, s0, s10
-  
-  #or s0, s0, s10
-  
-  # don't write if not 4 pixels computed
+
   addi s9, s9, -1
   bge s9, x0, iter_loop_header
-  
-  # store
+
   sw s0, 0(s7)
-  # restore pixel cnt
   addi s9, x0, 3
-  # incr frame pointer by 4*8 bit pixels
   addi s7, s7, 4
-  
+
 iter_loop_header:
-  # fp_x += 1
   addi s1, s1, 1
-  # if fp_x < fp_x_end then goto x_loop
   blt s1, s2, x_loop
-  
-  # fp_y = fp_y + fp_y_inc
+
   addi s3, s3, 1
-  # if fp_y < fp_y_end then goto y_loop
   blt s3, s4, y_loop
-  
 
 done:
-  jal x0, done
+  j done
 
 fp_mul:
-  # a0 = a1 * a2
-
   mul a0, a1, a2
-  
-  # return a0 >> 8 (fixed point arithmetic)
-  #   2^8*2^8 should be 2^8 (in this fixed point format 1=2^8)
   srai a0, a0, 8
   jalr x0, ra, 0
+

@@ -1,4 +1,4 @@
-module instr_cache#(parameter SIZE=64)(
+module instr_cache#(parameter SIZE=128)(
 	input clk,
 	input res,
 
