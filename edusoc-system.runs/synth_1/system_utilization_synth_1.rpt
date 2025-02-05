@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Feb  4 16:09:50 2025
+| Date         : Tue Feb  4 17:43:18 2025
 | Host         : ralab07.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
@@ -22,9 +22,9 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       8477 |       8331 |     114 |   32 | 4445 |     75 |      0 |          6 |
+| system                                                      |                                     (top) |       8337 |       8247 |      58 |   32 | 4381 |     75 |      0 |          6 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   cache                                                     |                               instr_cache |        329 |        215 |     114 |    0 |  128 |      0 |      0 |          0 |
+|   cache                                                     |                               instr_cache |        189 |        131 |      58 |    0 |   64 |      0 |      0 |          0 |
 |   memBus                                                    |                            dualCoreMemBus |        107 |        107 |       0 |    0 |    6 |      0 |      0 |          0 |
 |   memoryacces                                               |                               memoryacces |        172 |        172 |       0 |    0 |   58 |      0 |      0 |          0 |
 |     (memoryacces)                                           |                               memoryacces |         95 |         95 |       0 |    0 |    2 |      0 |      0 |          0 |
