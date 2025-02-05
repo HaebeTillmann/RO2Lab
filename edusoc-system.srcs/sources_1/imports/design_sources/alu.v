@@ -1,6 +1,8 @@
 // AUIPC, LUI, IMM, MUL, ...
 
 `define ALU_NEN 7'b00000000
+`define ALU_IOP0 7'b00000011
+`define ALU_IOP1 7'b00000111
 `define ALU_ADD 7'b00000001
 `define ALU_MUL 7'b00100001
 `define ALU_SUB 7'b01000001
@@ -45,6 +47,8 @@ module alu(
 			`ALU_SLTU: Q = $unsigned(A) < $unsigned(B);
 			`ALU_EQ: CMP = A == B;
 			`ALU_NE: CMP = A != B;
+			`ALU_IOP0: Q = A + B;
+			`ALU_IOP1: Q = B;
 			`ALU_LT: CMP = A < B;
 			`ALU_GE: CMP = A >= B;
 			`ALU_LTU: CMP = $unsigned(A) < $unsigned(B);
