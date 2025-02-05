@@ -18,7 +18,7 @@ module pc(
 	initial IRQ_ACK = 1'b0;
 	
 	always @(posedge CLK) begin
-	   if (mret) begin
+	   if (mret && IRQ_ACK) begin
 	       PC_OUT = adr_store;
 	       IRQ_ACK =1'b0;
 	   end

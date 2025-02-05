@@ -1,7 +1,7 @@
 `include "riscv_isa_defines.v"
 
 module proc(
-    input [31:0] instr_read, data_read,
+    input [31:0] instr_read, data_read, core_id,
     input [4:0] irq_id,
     input instr_valid, data_valid,irq, 
     input CLK,
@@ -144,6 +144,7 @@ module proc(
         .RES(RES),
         .RDINSTRET_EN(pc_enable),
         .CSR_ADR(instr[31:20]),
-        .CSR_READ(csr_read)
+        .CSR_READ(csr_read),
+        .CORE_ID(core_id)
     );
 endmodule
