@@ -15,6 +15,7 @@ module imm_gen(
             `OPCODE_LOAD: IMM = {12'b0, INSTR[31:20]};
             `OPCODE_BRANCH: IMM = {{19{INSTR[31]}}, INSTR[31], INSTR[7], INSTR[30:25], INSTR[11:8], 1'b0};
             `OPCODE_JAL: IMM = {{11{INSTR[31]}}, INSTR[31], INSTR[19:12], INSTR[20], INSTR[30:21], 1'b0};
+            `OPCODE_IOP: IMM =  {20'b0, INSTR[31:20]};
             default: IMM = 0;
         endcase
     end

@@ -276,66 +276,133 @@
          <obj_property name="ObjectShortName">DATA_ADDR[31:0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject type="array" fp_name="/system/proc/pc/D">
+      <obj_property name="ElementShortName">D[31:0]</obj_property>
+      <obj_property name="ObjectShortName">D[31:0]</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group43">
-      <obj_property name="label">Regset</obj_property>
+      <obj_property name="label">Regset1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="array" fp_name="/system/proc/regset/dat">
+      <wvobject type="logic" fp_name="/system/proc/regset1/write_enable">
+         <obj_property name="ElementShortName">write_enable</obj_property>
+         <obj_property name="ObjectShortName">write_enable</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/A_D">
+         <obj_property name="ElementShortName">A_D[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_D[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/A_Q0">
+         <obj_property name="ElementShortName">A_Q0[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q0[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/A_Q1">
+         <obj_property name="ElementShortName">A_Q1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q1[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/D">
+         <obj_property name="ElementShortName">D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">D[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/Q0">
+         <obj_property name="ElementShortName">Q0[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q0[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/Q1">
+         <obj_property name="ElementShortName">Q1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset1/dat">
          <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
          <obj_property name="isExpanded"></obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/D">
-         <obj_property name="ElementShortName">D[31:0]</obj_property>
-         <obj_property name="ObjectShortName">D[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/A_D">
-         <obj_property name="ElementShortName">A_D[4:0]</obj_property>
-         <obj_property name="ObjectShortName">A_D[4:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/A_Q0">
-         <obj_property name="ElementShortName">A_Q0[4:0]</obj_property>
-         <obj_property name="ObjectShortName">A_Q0[4:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/A_Q1">
-         <obj_property name="ElementShortName">A_Q1[4:0]</obj_property>
-         <obj_property name="ObjectShortName">A_Q1[4:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/system/proc/regset/write_enable">
+   </wvobject>
+   <wvobject type="group" fp_name="group168">
+      <obj_property name="label">Regset2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/system/proc/regset2/write_enable">
          <obj_property name="ElementShortName">write_enable</obj_property>
          <obj_property name="ObjectShortName">write_enable</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/Q0">
+      <wvobject type="array" fp_name="/system/proc/regset2/D">
+         <obj_property name="ElementShortName">D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">D[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset2/A_D">
+         <obj_property name="ElementShortName">A_D[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_D[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset2/A_Q0">
+         <obj_property name="ElementShortName">A_Q0[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q0[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset2/A_Q1">
+         <obj_property name="ElementShortName">A_Q1[4:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Q1[4:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset2/Q0">
          <obj_property name="ElementShortName">Q0[31:0]</obj_property>
          <obj_property name="ObjectShortName">Q0[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset/Q1">
+      <wvobject type="array" fp_name="/system/proc/regset2/Q1">
          <obj_property name="ElementShortName">Q1[31:0]</obj_property>
          <obj_property name="ObjectShortName">Q1[31:0]</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/system/proc/regset2/dat">
+         <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group37">
-      <obj_property name="label">ALU</obj_property>
+      <obj_property name="label">ALU1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/system/proc/alu/A">
-         <obj_property name="ElementShortName">A[31:0]</obj_property>
-         <obj_property name="ObjectShortName">A[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/B">
-         <obj_property name="ElementShortName">B[31:0]</obj_property>
-         <obj_property name="ObjectShortName">B[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/S">
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system/proc/alu1/S">
          <obj_property name="ElementShortName">S[7:0]</obj_property>
          <obj_property name="ObjectShortName">S[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/alu/Q">
+      <wvobject type="array" fp_name="/system/proc/alu1/A">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu1/B">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/alu1/CMP">
+         <obj_property name="ElementShortName">CMP</obj_property>
+         <obj_property name="ObjectShortName">CMP</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu1/Q">
          <obj_property name="ElementShortName">Q[31:0]</obj_property>
          <obj_property name="ObjectShortName">Q[31:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/system/proc/alu/CMP">
+   </wvobject>
+   <wvobject type="group" fp_name="group428">
+      <obj_property name="label">ALU2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system/proc/alu2/S">
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu2/A">
+         <obj_property name="ElementShortName">A[31:0]</obj_property>
+         <obj_property name="ObjectShortName">A[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu2/B">
+         <obj_property name="ElementShortName">B[31:0]</obj_property>
+         <obj_property name="ObjectShortName">B[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/alu2/CMP">
          <obj_property name="ElementShortName">CMP</obj_property>
          <obj_property name="ObjectShortName">CMP</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/proc/alu2/Q">
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group84">
@@ -406,14 +473,10 @@
          <obj_property name="ElementShortName">S</obj_property>
          <obj_property name="ObjectShortName">S</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset_d3_src_sel/I1">
-         <obj_property name="ElementShortName">I1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">I1[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/system/proc/regset_d3">
-         <obj_property name="ElementShortName">regset_d3[31:0]</obj_property>
-         <obj_property name="ObjectShortName">regset_d3[31:0]</obj_property>
-      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/system/proc/regset_we">
+      <obj_property name="ElementShortName">regset_we</obj_property>
+      <obj_property name="ObjectShortName">regset_we</obj_property>
    </wvobject>
    <wvobject fp_name="divider154" type="divider">
       <obj_property name="label">proc2</obj_property>

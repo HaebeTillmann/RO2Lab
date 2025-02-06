@@ -406,5 +406,5 @@ resize_pblock [get_pblocks {CLKAG_proc2/ctrl/PC_ENABLE_BUFG}] -add {CLOCKREGION_
 #startgroup
 create_pblock {CLKAG_proc/ctrl/PC_ENABLE_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_proc/ctrl/PC_ENABLE_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="proc/ctrl/PC_ENABLE_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_proc/ctrl/PC_ENABLE_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_proc/ctrl/PC_ENABLE_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
