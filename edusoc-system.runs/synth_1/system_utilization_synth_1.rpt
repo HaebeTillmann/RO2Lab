@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Feb  5 15:24:10 2025
-| Host         : ralab07.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
+| Date         : Thu Feb  6 11:57:44 2025
+| Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
 | Device       : xc7s50csga324-1
@@ -22,7 +22,7 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       7818 |       7728 |      58 |   32 | 4034 |     75 |      0 |          6 |
+| system                                                      |                                     (top) |       7815 |       7725 |      58 |   32 | 4034 |     75 |      0 |          6 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
 |   cache                                                     |                               instr_cache |        193 |        135 |      58 |    0 |   64 |      0 |      0 |          0 |
 |   memoryacces                                               |                               memoryacces |        172 |        172 |       0 |    0 |   58 |      0 |      0 |          0 |
@@ -30,7 +30,7 @@ Table of Contents
 |     data_load_table                                         |                              table5x4_sel |         77 |         77 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     read1_buffer                                            |                             REG_DRE_32__1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     read2_buffer                                            |                             REG_DRE_32__2 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |          0 |
-|   proc                                                      |                                      proc |       3318 |       3318 |       0 |    0 | 2325 |      0 |      0 |          6 |
+|   proc                                                      |                                      proc |       3315 |       3315 |       0 |    0 | 2325 |      0 |      0 |          6 |
 |     (proc)                                                  |                                      proc |        159 |        159 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     alu1                                                    |                                    alu__1 |        600 |        600 |       0 |    0 |    0 |      0 |      0 |          3 |
@@ -44,7 +44,7 @@ Table of Contents
 |     csr                                                     |                                       csr |        331 |        331 |       0 |    0 |  240 |      0 |      0 |          0 |
 |     ctrl                                                    |                                      ctrl |         11 |         11 |       0 |    0 |    4 |      0 |      0 |          0 |
 |     instr_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
-|     pc                                                      |                                        pc |        104 |        104 |       0 |    0 |   65 |      0 |      0 |          0 |
+|     pc                                                      |                                        pc |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
 |     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     regset1                                                 |                                 regset__1 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
 |     regset1_d2_src_sel                                      |                             MUX_2x1_32__2 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |

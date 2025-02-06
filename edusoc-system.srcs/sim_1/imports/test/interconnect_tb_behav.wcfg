@@ -14,15 +14,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="4,528.030 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,893.531 ns"></ZoomEndTime>
-      <Cursor1Time time="4,705.530 ns"></Cursor1Time>
+      <ZoomStartTime time="3,595.404 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,330.405 ns"></ZoomEndTime>
+      <Cursor1Time time="3,867.904 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="202"></NameColumnWidth>
+      <NameColumnWidth column_width="198"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="17" />
    <wvobject type="group" fp_name="group596">
       <obj_property name="label">Cache</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -419,7 +419,6 @@
    <wvobject type="group" fp_name="group94">
       <obj_property name="label">Imm Gen</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
@@ -433,39 +432,5 @@
    <wvobject type="logic" fp_name="/system/proc/regset_we">
       <obj_property name="ElementShortName">regset_we</obj_property>
       <obj_property name="ObjectShortName">regset_we</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/alu1_b2_src_sel/I0">
-      <obj_property name="ElementShortName">I0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I0[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/alu1_b2_src_sel/I1">
-      <obj_property name="ElementShortName">I1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I1[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/proc/alu1_b2_src_sel/S">
-      <obj_property name="ElementShortName">S</obj_property>
-      <obj_property name="ObjectShortName">S</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/alu1_b2_src_sel/Y">
-      <obj_property name="ElementShortName">Y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Y[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/simd_src_sel/I0">
-      <obj_property name="ElementShortName">I0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I0[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/simd_src_sel/I1">
-      <obj_property name="ElementShortName">I1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">I1[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/system/proc/simd_src_sel/S">
-      <obj_property name="ElementShortName">S</obj_property>
-      <obj_property name="ObjectShortName">S</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/system/proc/simd_src_sel/Y">
-      <obj_property name="ElementShortName">Y[31:0]</obj_property>
-      <obj_property name="ObjectShortName">Y[31:0]</obj_property>
    </wvobject>
 </wave_config>
