@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Tue Feb  4 17:46:15 2025
-| Host         : ralab07.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
+| Date         : Thu Feb  6 13:06:52 2025
+| Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_placed_1.rpt -pb system_utilization_placed_1.pb
 | Design       : system
 | Device       : xc7s50csga324-1
@@ -22,51 +22,71 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       7898 |       7823 |      58 |   17 | 4405 |     75 |      0 |          6 |
+| system                                                      |                                     (top) |      10802 |      10727 |      58 |   17 | 6389 |     75 |      0 |         12 |
 |   (system)                                                  |                                     (top) |         47 |         47 |       0 |    0 |    0 |      0 |      0 |          0 |
 |   cache                                                     |                               instr_cache |        189 |        131 |      58 |    0 |   64 |      0 |      0 |          0 |
 |   memBus                                                    |                            dualCoreMemBus |        107 |        107 |       0 |    0 |    6 |      0 |      0 |          0 |
 |   memoryacces                                               |                               memoryacces |        171 |        171 |       0 |    0 |   58 |      0 |      0 |          0 |
 |     (memoryacces)                                           |                               memoryacces |         94 |         94 |       0 |    0 |    2 |      0 |      0 |          0 |
-|     data_load_table                                         |                              table5x4_sel |         76 |         76 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     read1_buffer                                            |                             REG_DRE_32__1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
-|     read2_buffer                                            |                             REG_DRE_32__2 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |          0 |
-|   proc                                                      |                                   proc__1 |       1860 |       1860 |       0 |    0 | 1333 |      0 |      0 |          3 |
-|     (proc)                                                  |                                   proc__1 |        111 |        111 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     data_load_table                                         |                              table5x4_sel |         77 |         77 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     read1_buffer                                            |                             REG_DRE_32__2 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
+|     read2_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |          0 |
+|   proc                                                      |                                      proc |       3323 |       3323 |       0 |    0 | 2325 |      0 |      0 |          6 |
+|     (proc)                                                  |                                      proc |        158 |        158 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu1                                                    |                                    alu__1 |        604 |        604 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu1_a1_src_sel                                         |                             MUX_2x1_32__4 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu1_b2_src_sel                                         |                             MUX_2x1_32__6 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu1_b_src_sel                                          |                             MUX_2x1_32__5 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2                                                    |                                       alu |        559 |        559 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu2_a1_src_sel                                         |                            MUX_2x1_32__10 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2_b1_src_sel                                         |                            MUX_2x1_32__11 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2_b2_src_sel                                         |                            MUX_2x1_32__12 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     csr                                                     |                                       csr |        334 |        334 |       0 |    0 |  240 |      0 |      0 |          0 |
+|     ctrl                                                    |                                      ctrl |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     instr_buffer                                            |                             REG_DRE_32__1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
+|     pc                                                      |                                        pc |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
+|     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1                                                 |                                 regset__1 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
+|     regset1_d2_src_sel                                      |                             MUX_2x1_32__2 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1_d3_src_sel                                      |                             MUX_2x1_32__3 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1_d_src_sel                                       |                             MUX_2x1_32__1 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2                                                 |                                    regset |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
+|     regset2_d2_src_sel                                      |                             MUX_2x1_32__8 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2_d3_src_sel                                      |                             MUX_2x1_32__9 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2_d_src_sel                                       |                             MUX_2x1_32__7 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     simd_src_sel                                            |                            MUX_2x1_32__13 |         31 |         31 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   proc2                                                     |                                   proc__1 |       3326 |       3326 |       0 |    0 | 2325 |      0 |      0 |          6 |
+|     (proc2)                                                 |                                   proc__1 |        159 |        159 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                imm_gen__1 |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu                                                     |                                    alu__1 |        532 |        532 |       0 |    0 |    0 |      0 |      0 |          3 |
-|     alu_a_src_sel                                           |                             MUX_2x1_32__8 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu_b_src_sel                                           |                             MUX_2x1_32__7 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     csr                                                     |                                    csr__1 |        334 |        334 |       0 |    0 |  240 |      0 |      0 |          0 |
+|     alu1                                                    |                                    alu__3 |        604 |        604 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu1_a1_src_sel                                         |                            MUX_2x1_32__24 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu1_b2_src_sel                                         |                            MUX_2x1_32__22 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu1_b_src_sel                                          |                            MUX_2x1_32__23 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2                                                    |                                    alu__2 |        559 |        559 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu2_a1_src_sel                                         |                            MUX_2x1_32__18 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2_b1_src_sel                                         |                            MUX_2x1_32__17 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu2_b2_src_sel                                         |                            MUX_2x1_32__16 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     csr                                                     |                                    csr__1 |        336 |        336 |       0 |    0 |  240 |      0 |      0 |          0 |
 |     ctrl                                                    |                                   ctrl__1 |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
 |     instr_buffer                                            |                             REG_DRE_32__3 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     pc                                                      |                                     pc__1 |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
-|     pc_d_src_sel                                            |                             MUX_2x1_32__6 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset                                                  |                                 regset__1 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
-|     regset_d2_src_sel                                       |                            MUX_2x1_32__10 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset_d3_src_sel                                       |                             MUX_2x1_32__9 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset_d_src_sel                                        |                            MUX_2x1_32__11 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   proc2                                                     |                                      proc |       1857 |       1857 |       0 |    0 | 1333 |      0 |      0 |          3 |
-|     (proc2)                                                 |                                      proc |        108 |        108 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu                                                     |                                       alu |        531 |        531 |       0 |    0 |    0 |      0 |      0 |          3 |
-|     alu_a_src_sel                                           |                             MUX_2x1_32__4 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu_b_src_sel                                           |                             MUX_2x1_32__5 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     csr                                                     |                                       csr |        336 |        336 |       0 |    0 |  240 |      0 |      0 |          0 |
-|     ctrl                                                    |                                      ctrl |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
-|     instr_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
-|     pc                                                      |                                        pc |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
-|     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset                                                  |                                    regset |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
-|     regset_d2_src_sel                                       |                             MUX_2x1_32__2 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset_d3_src_sel                                       |                             MUX_2x1_32__3 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     regset_d_src_sel                                        |                             MUX_2x1_32__1 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   soc                                                       |                              edusoc_basic |       3669 |       3652 |       0 |   17 | 1611 |     75 |      0 |          0 |
+|     pc_d_src_sel                                            |                            MUX_2x1_32__14 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1                                                 |                                 regset__3 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
+|     regset1_d2_src_sel                                      |                            MUX_2x1_32__26 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1_d3_src_sel                                      |                            MUX_2x1_32__25 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset1_d_src_sel                                       |                            MUX_2x1_32__27 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2                                                 |                                 regset__2 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
+|     regset2_d2_src_sel                                      |                            MUX_2x1_32__20 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2_d3_src_sel                                      |                            MUX_2x1_32__19 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset2_d_src_sel                                       |                            MUX_2x1_32__21 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     simd_src_sel                                            |                            MUX_2x1_32__15 |         31 |         31 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   soc                                                       |                              edusoc_basic |       3645 |       3628 |       0 |   17 | 1611 |     75 |      0 |          0 |
 |     (soc)                                                   |                              edusoc_basic |          6 |          6 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     soc                                                     |                                    edusoc |       3664 |       3647 |       0 |   17 | 1611 |     75 |      0 |          0 |
-|       (soc)                                                 |                                    edusoc |         87 |         87 |       0 |    0 |    0 |      0 |      0 |          0 |
-|       boot_rom                                              |                          soc_memory_block |         22 |         22 |       0 |    0 |   15 |      2 |      0 |          0 |
-|         controller                                          |                     soc_memory_controller |         22 |         22 |       0 |    0 |   15 |      0 |      0 |          0 |
+|     soc                                                     |                                    edusoc |       3639 |       3622 |       0 |   17 | 1611 |     75 |      0 |          0 |
+|       (soc)                                                 |                                    edusoc |         72 |         72 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       boot_rom                                              |                          soc_memory_block |         23 |         23 |       0 |    0 |   15 |      2 |      0 |          0 |
+|         controller                                          |                     soc_memory_controller |         23 |         23 |       0 |    0 |   15 |      0 |      0 |          0 |
 |         xpm_memory_spram_inst                               |                          xpm_memory_spram |          0 |          0 |       0 |    0 |    0 |      2 |      0 |          0 |
 |           xpm_memory_base_inst                              |                           xpm_memory_base |          0 |          0 |       0 |    0 |    0 |      2 |      0 |          0 |
 |       clk_rst_gen                                           |                           soc_clock_reset |         12 |         11 |       0 |    1 |   24 |      0 |      0 |          0 |
@@ -81,8 +101,8 @@ Table of Contents
 |             SEQ                                             |             proc_sys_reset_0_sequence_psr |          9 |          9 |       0 |    0 |   12 |      0 |      0 |          0 |
 |               (SEQ)                                         |             proc_sys_reset_0_sequence_psr |          4 |          4 |       0 |    0 |    6 |      0 |      0 |          0 |
 |               SEQ_COUNTER                                   |                  proc_sys_reset_0_upcnt_n |          5 |          5 |       0 |    0 |    6 |      0 |      0 |          0 |
-|       interconnect_i                                        |                          soc_interconnect |        678 |        678 |       0 |    0 |   28 |      0 |      0 |          0 |
-|         (interconnect_i)                                    |                          soc_interconnect |        622 |        622 |       0 |    0 |    0 |      0 |      0 |          0 |
+|       interconnect_i                                        |                          soc_interconnect |        677 |        677 |       0 |    0 |   28 |      0 |      0 |          0 |
+|         (interconnect_i)                                    |                          soc_interconnect |        621 |        621 |       0 |    0 |    0 |      0 |      0 |          0 |
 |         slave_gen[0].conflict_resolver                      |                     soc_rrprio_encoder__1 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
 |         slave_gen[1].conflict_resolver                      |                     soc_rrprio_encoder__2 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
 |         slave_gen[2].conflict_resolver                      |                     soc_rrprio_encoder__3 |          8 |          8 |       0 |    0 |    4 |      0 |      0 |          0 |
@@ -95,31 +115,31 @@ Table of Contents
 |           (control)                                         |                               soc_control |         89 |         89 |       0 |    0 |   52 |      0 |      0 |          0 |
 |           int_ctl                                           |                  soc_interrupt_controller |          3 |          3 |       0 |    0 |    2 |      0 |      0 |          0 |
 |           per_ctl                                           |                 soc_peripheral_controller |         90 |         90 |       0 |    0 |   69 |      0 |      0 |          0 |
-|         gpio_i                                              |                                  soc_gpio |        435 |        435 |       0 |    0 |  263 |      0 |      0 |          0 |
-|           (gpio_i)                                          |                                  soc_gpio |        345 |        345 |       0 |    0 |  194 |      0 |      0 |          0 |
+|         gpio_i                                              |                                  soc_gpio |        436 |        436 |       0 |    0 |  263 |      0 |      0 |          0 |
+|           (gpio_i)                                          |                                  soc_gpio |        346 |        346 |       0 |    0 |  194 |      0 |      0 |          0 |
 |           per_ctl                                           | soc_peripheral_controller__parameterized0 |         90 |         90 |       0 |    0 |   69 |      0 |      0 |          0 |
-|         pwm_i                                               |                                   soc_pwm |        660 |        660 |       0 |    0 |  483 |      0 |      0 |          0 |
-|           (pwm_i)                                           |                                   soc_pwm |        570 |        570 |       0 |    0 |  414 |      0 |      0 |          0 |
+|         pwm_i                                               |                                   soc_pwm |        658 |        658 |       0 |    0 |  483 |      0 |      0 |          0 |
+|           (pwm_i)                                           |                                   soc_pwm |        568 |        568 |       0 |    0 |  414 |      0 |      0 |          0 |
 |           per_ctl                                           | soc_peripheral_controller__parameterized2 |         90 |         90 |       0 |    0 |   69 |      0 |      0 |          0 |
-|         timer                                               |                                 soc_timer |        301 |        301 |       0 |    0 |  208 |      0 |      0 |          0 |
-|           (timer)                                           |                                 soc_timer |        211 |        211 |       0 |    0 |  139 |      0 |      0 |          0 |
+|         timer                                               |                                 soc_timer |        303 |        303 |       0 |    0 |  208 |      0 |      0 |          0 |
+|           (timer)                                           |                                 soc_timer |        213 |        213 |       0 |    0 |  139 |      0 |      0 |          0 |
 |           per_ctl                                           | soc_peripheral_controller__parameterized1 |         90 |         90 |       0 |    0 |   69 |      0 |      0 |          0 |
 |       ram                                                   |          soc_memory_block__parameterized0 |         41 |         25 |       0 |   16 |   56 |     16 |      0 |          0 |
 |         controller                                          |     soc_memory_controller__parameterized0 |         25 |         25 |       0 |    0 |   24 |      0 |      0 |          0 |
 |         xpm_memory_spram_inst                               |          xpm_memory_spram__parameterized0 |         16 |          0 |       0 |   16 |   32 |     16 |      0 |          0 |
 |           xpm_memory_base_inst                              |           xpm_memory_base__parameterized0 |         16 |          0 |       0 |   16 |   32 |     16 |      0 |          0 |
-|       uart_bridge                                           |                           soc_uart_bridge |        179 |        179 |       0 |    0 |  232 |      0 |      0 |          0 |
-|         (uart_bridge)                                       |                           soc_uart_bridge |        128 |        128 |       0 |    0 |  136 |      0 |      0 |          0 |
+|       uart_bridge                                           |                           soc_uart_bridge |        178 |        178 |       0 |    0 |  232 |      0 |      0 |          0 |
+|         (uart_bridge)                                       |                           soc_uart_bridge |        127 |        127 |       0 |    0 |  136 |      0 |      0 |          0 |
 |         crc_engine                                          |                                 soc_crc32 |         18 |         18 |       0 |    0 |   48 |      0 |      0 |          0 |
 |         uart                                                |                                  soc_uart |         33 |         33 |       0 |    0 |   48 |      0 |      0 |          0 |
-|       vid                                                   |                      soc_video_controller |       1064 |       1064 |       0 |    0 |  179 |     57 |      0 |          0 |
+|       vid                                                   |                      soc_video_controller |       1058 |       1058 |       0 |    0 |  179 |     57 |      0 |          0 |
 |         vga_controller                                      |                                   soc_vga |         25 |         25 |       0 |    0 |   42 |      0 |      0 |          0 |
-|         vga_framebuffer                                     |                           soc_framebuffer |       1039 |       1039 |       0 |    0 |  137 |     57 |      0 |          0 |
+|         vga_framebuffer                                     |                           soc_framebuffer |       1033 |       1033 |       0 |    0 |  137 |     57 |      0 |          0 |
 |           a_controller                                      |     soc_memory_controller__parameterized1 |         27 |         27 |       0 |    0 |   22 |      0 |      0 |          0 |
-|           xpm_memory_tdpram_inst                            |                         xpm_memory_tdpram |       1012 |       1012 |       0 |    0 |  115 |     57 |      0 |          0 |
-|             xpm_memory_base_inst                            |           xpm_memory_base__parameterized1 |       1012 |       1012 |       0 |    0 |  115 |     57 |      0 |          0 |
+|           xpm_memory_tdpram_inst                            |                         xpm_memory_tdpram |       1006 |       1006 |       0 |    0 |  115 |     57 |      0 |          0 |
+|             xpm_memory_base_inst                            |           xpm_memory_base__parameterized1 |       1006 |       1006 |       0 |    0 |  115 |     57 |      0 |          0 |
 |               (xpm_memory_base_inst)                        |           xpm_memory_base__parameterized1 |          0 |          0 |       0 |    0 |   96 |      0 |      0 |          0 |
-|               gen_blk_box.gen_bb_async.xpm_memory_base_inst |                        asym_bwe_bb_bbox_0 |       1012 |       1012 |       0 |    0 |   19 |     57 |      0 |          0 |
+|               gen_blk_box.gen_bb_async.xpm_memory_base_inst |                        asym_bwe_bb_bbox_0 |       1006 |       1006 |       0 |    0 |   19 |     57 |      0 |          0 |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
