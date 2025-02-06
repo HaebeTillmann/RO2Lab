@@ -14,15 +14,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,595.404 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,330.405 ns"></ZoomEndTime>
-      <Cursor1Time time="3,867.904 ns"></Cursor1Time>
+      <ZoomStartTime time="2.100000 us"></ZoomStartTime>
+      <ZoomEndTime time="14.100001 us"></ZoomEndTime>
+      <Cursor1Time time="7.745000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="198"></NameColumnWidth>
-      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+      <NameColumnWidth column_width="235"></NameColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="15" />
    <wvobject type="group" fp_name="group596">
       <obj_property name="label">Cache</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -143,26 +143,63 @@
          <obj_property name="ElementShortName">s[2:0]</obj_property>
          <obj_property name="ObjectShortName">s[2:0]</obj_property>
       </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/read1">
+         <obj_property name="ElementShortName">read1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">read1[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/read2">
+         <obj_property name="ElementShortName">read2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">read2[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_READ">
+         <obj_property name="ElementShortName">DATA_READ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_READ[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/data_load_table/in_2x3">
+         <obj_property name="ElementShortName">in_2x3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">in_2x3[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/data_load_table/selected">
+         <obj_property name="ElementShortName">selected[31:0]</obj_property>
+         <obj_property name="ObjectShortName">selected[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/system/memoryacces/DATA_VALID">
+         <obj_property name="ElementShortName">DATA_VALID</obj_property>
+         <obj_property name="ObjectShortName">DATA_VALID</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/DATA_READ">
+         <obj_property name="ElementShortName">DATA_READ[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_READ[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memBus/DATA_RDATA">
+         <obj_property name="ElementShortName">DATA_RDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_RDATA[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/system/memoryacces/state">
+         <obj_property name="ElementShortName">state[1:0]</obj_property>
+         <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/system/memoryacces/read1">
-      <obj_property name="ElementShortName">read1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">read1[31:0]</obj_property>
+   <wvobject type="group" fp_name="group3215">
+      <obj_property name="label">Mem Bus</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/system/memoryacces/read2">
-      <obj_property name="ElementShortName">read2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">read2[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/system/memBus/DATA_REQ_2">
+      <obj_property name="ElementShortName">DATA_REQ_2</obj_property>
+      <obj_property name="ObjectShortName">DATA_REQ_2</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/system/memoryacces/DATA_READ">
-      <obj_property name="ElementShortName">DATA_READ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_READ[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/system/memBus/DATA_REQ_1">
+      <obj_property name="ElementShortName">DATA_REQ_1</obj_property>
+      <obj_property name="ObjectShortName">DATA_REQ_1</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/system/memoryacces/data_load_table/in_2x3">
-      <obj_property name="ElementShortName">in_2x3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">in_2x3[31:0]</obj_property>
+   <wvobject type="logic" fp_name="/system/memBus/DATA_VALID">
+      <obj_property name="ElementShortName">DATA_VALID</obj_property>
+      <obj_property name="ObjectShortName">DATA_VALID</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/system/memoryacces/data_load_table/selected">
-      <obj_property name="ElementShortName">selected[31:0]</obj_property>
-      <obj_property name="ObjectShortName">selected[31:0]</obj_property>
+   <wvobject type="array" fp_name="/system/memBus/state_dat">
+      <obj_property name="ElementShortName">state_dat[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_dat[2:0]</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group25">
       <obj_property name="label">proc</obj_property>
@@ -391,6 +428,7 @@
    <wvobject type="group" fp_name="group89">
       <obj_property name="label">Program Counter</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/system/proc/pc/MODE">
          <obj_property name="ElementShortName">MODE</obj_property>
          <obj_property name="ObjectShortName">MODE</obj_property>
@@ -406,6 +444,8 @@
       <wvobject type="array" fp_name="/system/proc/pc/PC_OUT">
          <obj_property name="ElementShortName">PC_OUT[31:0]</obj_property>
          <obj_property name="ObjectShortName">PC_OUT[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/system/proc/pc/IRQ_J_ADR">
          <obj_property name="ElementShortName">IRQ_J_ADR[31:0]</obj_property>
@@ -415,14 +455,19 @@
          <obj_property name="ElementShortName">IRQ</obj_property>
          <obj_property name="ObjectShortName">IRQ</obj_property>
       </wvobject>
+      <wvobject type="logic" fp_name="/system/proc/pc/mret">
+         <obj_property name="ElementShortName">mret</obj_property>
+         <obj_property name="ObjectShortName">mret</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group94">
       <obj_property name="label">Imm Gen</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/system/proc/IMM_GEN/IMM">
          <obj_property name="ElementShortName">IMM[31:0]</obj_property>
          <obj_property name="ObjectShortName">IMM[31:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/system/proc/pc_d_src_sel/S">
          <obj_property name="ElementShortName">S</obj_property>
@@ -432,5 +477,20 @@
    <wvobject type="logic" fp_name="/system/proc/regset_we">
       <obj_property name="ElementShortName">regset_we</obj_property>
       <obj_property name="ObjectShortName">regset_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider154" type="divider">
+      <obj_property name="label">proc2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">#FFFFFF</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group715">
+      <obj_property name="label">Regset</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/system/proc2/regset/dat">
+         <obj_property name="ElementShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">dat[31:0][31:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

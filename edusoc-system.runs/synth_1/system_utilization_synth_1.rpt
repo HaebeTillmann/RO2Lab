@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Feb  6 11:57:44 2025
-| Host         : ralab18.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
+| Date         : Tue Feb  4 17:43:18 2025
+| Host         : ralab07.informatik.uni-stuttgart.de running 64-bit AlmaLinux release 8.10 (Cerulean Leopard)
 | Command      : report_utilization -hierarchical -file system_utilization_synth_1.rpt -pb system_utilization_synth_1.pb
 | Design       : system
 | Device       : xc7s50csga324-1
@@ -22,27 +22,38 @@ Table of Contents
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
 |                           Instance                          |                   Module                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
 +-------------------------------------------------------------+-------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
-| system                                                      |                                     (top) |       7815 |       7725 |      58 |   32 | 4034 |     75 |      0 |          6 |
+| system                                                      |                                     (top) |       8337 |       8247 |      58 |   32 | 4381 |     75 |      0 |          6 |
 |   (system)                                                  |                                     (top) |         64 |         64 |       0 |    0 |    0 |      0 |      0 |          0 |
-|   cache                                                     |                               instr_cache |        193 |        135 |      58 |    0 |   64 |      0 |      0 |          0 |
+|   cache                                                     |                               instr_cache |        189 |        131 |      58 |    0 |   64 |      0 |      0 |          0 |
+|   memBus                                                    |                            dualCoreMemBus |        107 |        107 |       0 |    0 |    6 |      0 |      0 |          0 |
 |   memoryacces                                               |                               memoryacces |        172 |        172 |       0 |    0 |   58 |      0 |      0 |          0 |
 |     (memoryacces)                                           |                               memoryacces |         95 |         95 |       0 |    0 |    2 |      0 |      0 |          0 |
 |     data_load_table                                         |                              table5x4_sel |         77 |         77 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     read1_buffer                                            |                             REG_DRE_32__1 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     read2_buffer                                            |                             REG_DRE_32__2 |          0 |          0 |       0 |    0 |   24 |      0 |      0 |          0 |
-|   proc                                                      |                                      proc |       3315 |       3315 |       0 |    0 | 2325 |      0 |      0 |          6 |
-|     (proc)                                                  |                                      proc |        159 |        159 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   proc                                                      |                                   proc__1 |       1866 |       1866 |       0 |    0 | 1333 |      0 |      0 |          3 |
+|     (proc)                                                  |                                   proc__1 |        114 |        114 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     IMM_GEN                                                 |                                imm_gen__1 |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu                                                     |                                    alu__1 |        532 |        532 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu_a_src_sel                                           |                             MUX_2x1_32__8 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu_b_src_sel                                           |                             MUX_2x1_32__7 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     csr                                                     |                                    csr__1 |        334 |        334 |       0 |    0 |  240 |      0 |      0 |          0 |
+|     ctrl                                                    |                                   ctrl__1 |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     instr_buffer                                            |                             REG_DRE_32__3 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
+|     pc                                                      |                                     pc__1 |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
+|     pc_d_src_sel                                            |                             MUX_2x1_32__6 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset                                                  |                                 regset__1 |        607 |        607 |       0 |    0 |  992 |      0 |      0 |          0 |
+|     regset_d2_src_sel                                       |                            MUX_2x1_32__10 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset_d3_src_sel                                       |                             MUX_2x1_32__9 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     regset_d_src_sel                                        |                            MUX_2x1_32__11 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   proc2                                                     |                                      proc |       1868 |       1868 |       0 |    0 | 1333 |      0 |      0 |          3 |
+|     (proc2)                                                 |                                      proc |        114 |        114 |       0 |    0 |    0 |      0 |      0 |          0 |
 |     IMM_GEN                                                 |                                   imm_gen |         38 |         38 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu1                                                    |                                    alu__1 |        600 |        600 |       0 |    0 |    0 |      0 |      0 |          3 |
-|     alu1_a1_src_sel                                         |                             MUX_2x1_32__4 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu1_b2_src_sel                                         |                             MUX_2x1_32__6 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu1_b_src_sel                                          |                             MUX_2x1_32__5 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu2                                                    |                                       alu |        558 |        558 |       0 |    0 |    0 |      0 |      0 |          3 |
-|     alu2_a1_src_sel                                         |                            MUX_2x1_32__10 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu2_b1_src_sel                                         |                            MUX_2x1_32__11 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     alu2_b2_src_sel                                         |                            MUX_2x1_32__12 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
-|     csr                                                     |                                       csr |        331 |        331 |       0 |    0 |  240 |      0 |      0 |          0 |
-|     ctrl                                                    |                                      ctrl |         11 |         11 |       0 |    0 |    4 |      0 |      0 |          0 |
+|     alu                                                     |                                       alu |        532 |        532 |       0 |    0 |    0 |      0 |      0 |          3 |
+|     alu_a_src_sel                                           |                             MUX_2x1_32__4 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     alu_b_src_sel                                           |                             MUX_2x1_32__5 |         32 |         32 |       0 |    0 |    0 |      0 |      0 |          0 |
+|     csr                                                     |                                       csr |        336 |        336 |       0 |    0 |  240 |      0 |      0 |          0 |
+|     ctrl                                                    |                                      ctrl |         12 |         12 |       0 |    0 |    4 |      0 |      0 |          0 |
 |     instr_buffer                                            |                                REG_DRE_32 |          0 |          0 |       0 |    0 |   32 |      0 |      0 |          0 |
 |     pc                                                      |                                        pc |        101 |        101 |       0 |    0 |   65 |      0 |      0 |          0 |
 |     pc_d_src_sel                                            |                                MUX_2x1_32 |         16 |         16 |       0 |    0 |    0 |      0 |      0 |          0 |

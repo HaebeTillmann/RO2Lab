@@ -21,13 +21,13 @@ reg [SIZE-1:0] valids;
 wire hit;
 wire [$clog2(SIZE)-1:0] index;
 
-assign index = cached_instr_adr[$clog2(SIZE)-1:0];
+assign index = cached_instr_adr[$clog2(SIZE)+1:2];
 assign hit = (cached_instr_adr[31:$clog2(SIZE)] == tags[index]) && valids[index];
 assign instr_adr = cached_instr_adr;
 
 always @(posedge clk) begin 
 	if(res == 1'b1) valids <= {SIZE{1'b0}};
-	else if (hit == 1'b0 && instr_valid) begin
+	else if (instr_valid) begin
 		lines[index] <= instr_read;
 		tags[index] <= cached_instr_adr[31:$clog2(SIZE)];
 		valids[index] <= 1;
