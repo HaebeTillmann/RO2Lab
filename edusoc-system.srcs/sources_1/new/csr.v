@@ -16,6 +16,8 @@ module csr(
             MSCOUNT = 1'b0;
         end
         
+        if (RDINSTRET_EN) RDINSTRET = RDINSTRET + 1;
+        
         RDCYCLE = RDCYCLE + 1'b1;
         MSCOUNT = MSCOUNT + 1'b1;
         if (MSCOUNT == 25000) begin
@@ -34,6 +36,4 @@ module csr(
             default: CSR_READ = 32'b0;
         endcase
     end
-   
-  always @(posedge RDINSTRET_EN) RDINSTRET = RDINSTRET + 1;
 endmodule
